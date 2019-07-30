@@ -1,0 +1,18 @@
+config data
+$ git config --list --show-origin
+
+$ git config --global user.name "maximgoh76"
+$ git config --global user.email maxim_goh@yahoo.com
+
+git commit -m "second init"
+
+git remote -v
+
+
+git remote add origin https://github.com/maximgoh76/angular_test.git
+
+maximgoh76
+max1976!
+
+add global variables path: C:\Users\p0016133\AppData\Roaming\npm  
+Restart to application
