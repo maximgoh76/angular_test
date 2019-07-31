@@ -7,6 +7,7 @@ import { LoginComponent } from './views/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CustomVideoComponent } from './components/custom-video/custom-video.component';
 import { CustomImgComponent } from './components/custom-img/custom-img.component';
+import { CustomMediaHiveComponent } from './components/custom-media-hive/custom-media-hive.component';
 
 // const  clientRouts: Routes = [
 //   {
@@ -32,7 +33,8 @@ import { CustomImgComponent } from './components/custom-img/custom-img.component
     MainComponent,
     LoginComponent,
     CustomVideoComponent,
-    CustomImgComponent
+    CustomImgComponent,
+    CustomMediaHiveComponent
   ],
   imports: [
     BrowserModule,

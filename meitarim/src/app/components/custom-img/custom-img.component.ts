@@ -1,22 +1,61 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediainterfaces';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-custom-img',
   templateUrl: './custom-img.component.html',
   styleUrls: ['./custom-img.component.css']
 })
-export class CustomImgComponent implements OnInit {
 
+export class CustomImgComponent implements OnInit,IPlayableMedia {
+
+  private _myOptions:IPlayableMediaOptions;
+  @Output()
+  myOncanplaythrough:EventEmitter<string> = new EventEmitter<string>();
+  
+  play(): void {
+    //TODO
+  }
+  stop(): void {
+    //TODO
+  }
+
+  setOptions(option: IPlayableMediaOptions): void {
+    this._myOptions = option;
+    var myStyle:any = 
+    {
+      display:"inline-block",
+      background:"url('"+ this._myOptions.src  + "') no-repeat center center",
+      width:this._myOptions.width + "px",
+      height:this._myOptions.height + "px"
+    }
+    
+    // " display: inline-block;background:url('"+ this._myOptions.src
+    //   + "') no-repeat center center;width: "+this._myOptions.width+ "px;height: "+this._myOptions.height+ "px;"
+    this.myStyle = myStyle;
+    this.myOncanplaythrough.emit (this._myOptions.src);
+  }
+  
+  getOptions():IPlayableMediaOptions {
+    return this._myOptions;
+  }
+  setCurrentPosition(position: number): void {
+    throw new Error("Method not implemented.");
+  }
+  
   constructor() { }
-  protected _mysSrc : String;
 
-  public get mySrc(){
-      return this._mysSrc;
+  private _myStyle:any;
+  
+  public get myStyle(){
+    return this._myStyle;
   }
 
-  @Input() public set mySrc(p_value){
-    this._mysSrc = p_value;
+  @Input() public set myStyle(p_value){
+    this._myStyle = p_value;
   }
+
 
   ngOnInit() {
     
