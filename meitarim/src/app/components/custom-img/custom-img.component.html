@@ -1,3 +1,17 @@
-<div #imageDiv  id="imageDiv"
-     [ngStyle]="myStyle">
+<div>
+    <div class="inlinediv">
+        <div class="slider-wrapper" [style.height.px]="myHeight">
+                <input type="range" min="0" max="11" value="7" step="1" >
+        </div>
+    </div>
+    <div class="inlinediv">
+        line
+    </div>
+    <div class="inlinediv">
+        <div #imageDiv  id="imageDiv"
+            [ngStyle]="myStyle">
+        </div>
+    </div>
 </div>
+
+
