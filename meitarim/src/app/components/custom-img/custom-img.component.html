@@ -1,16 +1,17 @@
 <div>
     <div class="inlinediv">
-        <div class="slider-wrapper" [style.height.px]="myHeight">
-                <input type="range" min="0" max="11" value="7" step="1" >
+        <div class="slider-wrapper" [style.height.px]="myHeight" [style.visibility]="myVisibility">
+                <input type="range" (onchange)="setMyNewValue($event)" [min]="myMin" [max]="myMax" [value]="myValue" [step]="myStep" 
+                [style.width.px]="myHeight"  [style.transform-origin]="myTransformOrigin" 
+                 [style.visibility]="myVisibility" #slider>
         </div>
-    </div>
-    <div class="inlinediv">
-        line
     </div>
     <div class="inlinediv">
         <div #imageDiv  id="imageDiv"
             [ngStyle]="myStyle">
         </div>
+        <div  style="background-color:red;position:relative;height: 2px;"
+        [style.top.px]="myTop" [style.width.px]="myWidth"></div>
     </div>
 </div>
 

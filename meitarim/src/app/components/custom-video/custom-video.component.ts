@@ -91,6 +91,10 @@ export class CustomVideoComponent implements OnInit,IPlayableMedia {
     this.videoPlayer.play();
   }
 
+  public myCuurentTime():number{
+    return this.videoPlayer.currentTime;
+  }
+
   ngOnInit() {
 
   }

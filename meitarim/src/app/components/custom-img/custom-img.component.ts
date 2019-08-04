@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediainterfaces';
 import { NgStyle } from '@angular/common';
 
@@ -10,15 +10,66 @@ import { NgStyle } from '@angular/common';
 
 export class CustomImgComponent implements OnInit,IPlayableMedia {
 
+
   private _myOptions:IPlayableMediaOptions;
+  private _myTimer: any;
+  private _mySpeed:number;
+  
+
+  private _myStyle:any;
+  private _myHeight:string;
+  private _myTransformOrigin:string;
+  private _myTop : number;
+  private _myWidth: number;
+  private _myVisibility: string;
+
+  private _myMin: number;
+  private _myMax: number;
+  private _myValue: number;
+  private _myStep: number;
+  private _myOffset: number;
+  
+  _mySlider: HTMLInputElement;
+
   @Output()
   myOncanplaythrough:EventEmitter<string> = new EventEmitter<string>();
-  
-  play(): void {
-    //TODO
+
+  constructor() { }
+
+  ngOnInit() {
+    this._mySpeed = 1000;
+    this._myOffset= 6;
+   
   }
-  stop(): void {
-    //TODO
+
+
+
+  @ViewChild("slider",{static: false})  
+  set mainVideoEl(el: ElementRef) {
+        this._mySlider = el.nativeElement;
+  }
+
+
+  setMyNewValue(newValue:number){
+    alert('hi');
+    this.myValue = newValue;
+    this.setMyTopValue();
+  }
+
+  setMyTopValue(){
+    var slider = this._mySlider;
+    var sliderPos =this.myValue / (this.myMax - this.myMin+1);
+    var myCursorStep = slider.clientWidth * sliderPos;
+    // var myCursorStep  = ((this._myOptions.height) / (this.myMax - this.myMin +1));
+    //this.myTop = (-1) * Math.round(myCursorStep * this.myValue + this._myOffset);
+    this.myTop = (-1) * myCursorStep;
+  }
+
+  sync(currentTime:number): void {
+    if (this.myMax>this.myValue){
+      this.myValue = currentTime;
+      this.setMyTopValue();
+    }
   }
 
   setOptions(option: IPlayableMediaOptions): void {
@@ -35,7 +86,14 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     //   + "') no-repeat center center;width: "+this._myOptions.width+ "px;height: "+this._myOptions.height+ "px;"
     this.myStyle = myStyle;
     this.myOncanplaythrough.emit (this._myOptions.src);
-   
+    this.myTransformOrigin =  this._myOptions.height/2 + "px  " + this._myOptions.height/2 + "px";
+    this.myTop = (-1) * this._myOffset;
+
+    this.myMin = this._myOptions.start;
+    this.myMax = this._myOptions.end;
+    this.myValue = this._myOptions.start;
+    this.myStep = 1;
+    this.myVisibility = "visible";
   }
   
   getOptions():IPlayableMediaOptions {
@@ -45,11 +103,37 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     throw new Error("Method not implemented.");
   }
   
-  constructor() { }
 
-  private _myStyle:any;
-  private _myHeight:string;
-  
+
+  public get myMin(): number {
+    return this._myMin;
+  }
+  @Input() public set myMin(value: number) {
+    this._myMin = value;
+  }
+
+  public get myMax(): number {
+    return this._myMax;
+  }
+  @Input() public set myMax(value: number) {
+    this._myMax = value;
+  }
+ 
+  public get myValue(): number {
+    return this._myValue;
+  }
+  @Input() public set myValue(value: number) {
+    this._myValue = value;
+  }
+
+  public get myStep(): number {
+    return this._myStep;
+  }
+
+  @Input() public set myStep(value: number) {
+    this._myStep = value;
+  }
+
   public get myStyle(){
     return this._myStyle;
   }
@@ -57,20 +141,45 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
   @Input() public set myStyle(p_value){
     this._myStyle = p_value;
   }
+  public get myTop(){
+    return this._myTop;
+  }
 
+  @Input() public set myTop(p_value){
+    this._myTop = p_value;
+  }
 
   
   public get myHeight(){
     return this._myHeight;
   }
 
+  @Input() public set myTransformOrigin(p_value){
+    this._myTransformOrigin = p_value;
+  }
+
+ public get myTransformOrigin(){
+    return this._myTransformOrigin;
+  }
+
   @Input() public set myHeight(p_value){
     this._myHeight = p_value;
   }
 
-
-  ngOnInit() {
-    
+  public get myWidth(): number {
+    return this._myWidth;
   }
+  
+  @Input() public set myWidth(value: number) {
+    this._myWidth = value;
+  }
+
+  public get myVisibility(): string {
+    return this._myVisibility;
+  }
+  @Input()  public set myVisibility(value: string) {
+    this._myVisibility = value;
+  }
+
 
 }

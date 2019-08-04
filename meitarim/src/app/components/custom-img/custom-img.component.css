@@ -3,10 +3,10 @@
     width: 20px;
     height:400px;
     padding: 0;
-    background-color: aquamarine;
+    visibility: hidden;
   }
   .slider-wrapper input {
-    width: 401px;
+    width: 100px;
     height: 20px;
     margin: 0;
     transform-origin: 200.5px 200.5px;
