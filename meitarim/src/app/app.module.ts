@@ -8,6 +8,9 @@ import { CustomVideoComponent } from './components/custom-video/custom-video.com
 import { CustomImgComponent } from './components/custom-img/custom-img.component';
 import { CustomMediaHiveComponent } from './components/custom-media-hive/custom-media-hive.component';
 import { CustomImgBaseComponent } from './components/custom-img-base/custom-img-base.component';
+import { Ng5SliderModule } from 'ng5-slider';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { CustomImgBaseComponent } from './components/custom-img-base/custom-img-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng5SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

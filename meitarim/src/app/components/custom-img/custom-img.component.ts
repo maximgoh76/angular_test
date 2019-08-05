@@ -1,6 +1,17 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediainterfaces';
-import { NgStyle } from '@angular/common';
+import { Options } from 'ng5-slider';
+
+interface SimpleSliderModel {
+  value: number;
+  options: Options;
+}
+
+interface RangeSliderModel {
+  minValue: number;
+  maxValue: number;
+  options: Options;
+}
 
 @Component({
   selector: 'app-custom-img',
@@ -12,14 +23,13 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
 
 
   private _myOptions:IPlayableMediaOptions;
-  private _myTimer: any;
-  private _mySpeed:number;
-  
 
   private _myStyle:any;
   private _myHeight:string;
   private _myTransformOrigin:string;
   private _myTop : number;
+  private _myTopOfSeconds: number;
+  
   private _myWidth: number;
   private _myVisibility: string;
 
@@ -34,19 +44,25 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
   @Output()
   myOncanplaythrough:EventEmitter<string> = new EventEmitter<string>();
 
+  verticalSlider1: SimpleSliderModel = {
+    value: 0,
+    options: {
+      floor: 0,
+      ceil: 60,
+      vertical: true
+    }
+  }
   constructor() { }
 
   ngOnInit() {
-    this._mySpeed = 1000;
     this._myOffset= 6;
-   
   }
 
 
 
   @ViewChild("slider",{static: false})  
   set mainVideoEl(el: ElementRef) {
-        this._mySlider = el.nativeElement;
+        //this._mySlider = el.nativeElement;
   }
 
 
@@ -57,18 +73,19 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
   }
 
   setMyTopValue(){
-    var slider = this._mySlider;
-    var sliderPos =this.myValue / (this.myMax - this.myMin+1);
-    var myCursorStep = slider.clientWidth * sliderPos;
+    //var slider = this._mySlider;
+    var sliderPos =this.myValue / (this.myMax - this.myMin);
+    var myCursorStep = this._myOptions.height * sliderPos;
     // var myCursorStep  = ((this._myOptions.height) / (this.myMax - this.myMin +1));
     //this.myTop = (-1) * Math.round(myCursorStep * this.myValue + this._myOffset);
-    this.myTop = (-1) * myCursorStep;
+    this.myTop = (-1) * myCursorStep  - this._myOffset;
   }
 
   sync(currentTime:number): void {
-    if (this.myMax>this.myValue){
+    if (this.myMax>=this.myValue){
       this.myValue = currentTime;
       this.setMyTopValue();
+      this.verticalSlider1.value = this.myValue;
     }
   }
 
@@ -93,7 +110,7 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     this.myMax = this._myOptions.end;
     this.myValue = this._myOptions.start;
     this.myStep = 1;
-    this.myVisibility = "visible";
+    //this.myVisibility = "visible";
   }
   
   getOptions():IPlayableMediaOptions {
@@ -120,7 +137,7 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
   }
  
   public get myValue(): number {
-    return this._myValue;
+    return (Math.round (this._myValue*10)/10);
   }
   @Input() public set myValue(value: number) {
     this._myValue = value;
@@ -149,6 +166,11 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     this._myTop = p_value;
   }
 
+  public get myTopOfSeconds(): number {
+    return  this._myTop - 11 // add offset to myTop ;
+  }
+
+ 
   
   public get myHeight(){
     return this._myHeight;

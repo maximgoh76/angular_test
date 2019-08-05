@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediainterfaces';
 import { CustomImgComponent } from '../custom-img/custom-img.component';
 import { CustomVideoComponent } from '../custom-video/custom-video.component';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-custom-media-hive',
@@ -20,10 +21,13 @@ export class CustomMediaHiveComponent implements OnInit {
   private _itemsLoaded:number = 0;
   private _itemsCount:number = 0;
   private _currentTime: number = 0;
+  private _currentDruation = 60;
  
   public get currentTime(): number {
     return this._currentTime;
   }
+
+  
 
   @Input() public set currentTime(value: number) {
     this._currentTime = value;
@@ -33,7 +37,7 @@ export class CustomMediaHiveComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this._mySpeed = 200;
+    this._mySpeed = 100;
     this._currentTime = 1000;
   }
 
@@ -43,10 +47,10 @@ export class CustomMediaHiveComponent implements OnInit {
       this._itemsCount = 5; 
       this.img1Component.setOptions(
         {
-          end:60,
+          end:this._currentDruation,
           start:0,
           height:750, //951
-          width:200,  //257
+          width:140,  //257
           src:"/assets/pictures/specto.png",
           step:1
         }
@@ -54,7 +58,7 @@ export class CustomMediaHiveComponent implements OnInit {
 
       this.img2Component.setOptions(
         {
-          end:60,
+          end:this._currentDruation,
           start:0,
           height:276, //951
           width:168,  //257
@@ -65,7 +69,7 @@ export class CustomMediaHiveComponent implements OnInit {
 
       this.img3Component.setOptions(
         {
-          end:60,
+          end:this._currentDruation,
           start:0,
           height:300, //951
           width:168,  //257
@@ -76,7 +80,7 @@ export class CustomMediaHiveComponent implements OnInit {
         
       this.video1Component.setOptions(
         {
-          end:60,
+          end:this._currentDruation,
           start:0,
           height:300,
           width:400,
@@ -86,7 +90,7 @@ export class CustomMediaHiveComponent implements OnInit {
       );
       this.video2Component.setOptions(
           {
-            end:60,
+            end:this._currentDruation,
             start:0,
             height:300,
             width:400,
@@ -123,10 +127,14 @@ public startPlay(){
 
         //get video position
         var currentTime = this.video1Component.myCuurentTime();
-        console.log("currentTime" + currentTime);
-        this.img1Component.sync(currentTime);
-        this.img2Component.sync(currentTime);
-        this.img3Component.sync(currentTime);
+        //console.log("currentTime" + currentTime);
+        if (currentTime<=this._currentDruation){
+          this.img1Component.sync(currentTime);
+          this.img2Component.sync(currentTime);
+          this.img3Component.sync(currentTime);
+        }else{
+          this.stopTimer();
+        }
       },  this._mySpeed);
     }
   }

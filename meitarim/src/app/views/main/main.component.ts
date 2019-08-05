@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { CustomImgComponent } from 'src/app/components/custom-img/custom-img.component';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
+
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,12 @@ export class MainComponent implements OnInit,AfterViewInit  {
   
   ngAfterViewInit() {
   }  
+  onDrop(event: CdkDragDrop<string[]>) {
+   alert ('dropped')
+  }
+  entered(event: any) {
+    alert ('entered')
+   }
   
   ngOnInit() {
   }
