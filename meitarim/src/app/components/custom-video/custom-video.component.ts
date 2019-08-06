@@ -35,6 +35,7 @@ export class CustomVideoComponent implements OnInit,IPlayableMedia {
     this.mySrc = vid;// this._myOptions.src;
     this.videoPlayer.load();
     //this.videoPlayer.addEventListener ("oncanplaythrough",this.oncanplaythroughLocal)
+    //this.videoPlayer.addEventListener("oncanplaythrough",this.oncanplaythroughLocal)
     this.videoPlayer.oncanplaythrough=this.oncanplaythroughLocal.bind(this);
   }
 

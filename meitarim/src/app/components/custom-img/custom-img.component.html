@@ -1,15 +1,17 @@
 <div > 
-    <!--div class="inlinediv" style="background-color: aqua"  >
+    <div class="inlinediv" >
         <div class="slider-wrapper" [style.height.px]="myHeight" [style.visibility]="myVisibility">
-                <input type="range" (onchange)="setMyNewValue($event)" [min]="myMin" [max]="myMax" [value]="myValue" [step]="myStep" 
+                <input type="range" 
+              
+                 [min]="myMin" [max]="myMax" [value]="myValue" [step]="myStep" 
                 [style.width.px]="myHeight"  [style.transform-origin]="myTransformOrigin" 
                  [style.visibility]="myVisibility" #slider>
         </div>
-    </div-->
-    <div style="float: left;"  [style.height.px]="myHeight"   >
+    </div>
+    <!--div style="float: left;"  [style.height.px]="myHeight"   >
             <ng5-slider [(value)]="verticalSlider1.value" [options]="verticalSlider1.options"></ng5-slider>
         
-    </div>
+    </div-->
   
     <div class="inlinediv" >
         <div #imageDiv  id="imageDiv"
@@ -18,11 +20,13 @@
         <div  style="background-color:red;position:relative;height: 2px;"
             [style.top.px]="myTop" [style.width.px]="myWidth">
         </div>
-        <div  style="position:relative;float:inline-end;"
-            [style.top.px]="myTopOfSeconds" >
-       
-        <input type="number"  style="width:50px;top:150px" [value]="myValue" readonly  >
-    </div>
+        <div  style="position:relative;text-align: right;"
+            [style.top.px]="myTopOfSeconds"   >
+            <div style="position:relative;left:54px;">
+                <input type="number"  style="width:50px;" [value]="myValue" readonly  >
+            </div>
+        
+        </div>
     </div>
 </div>
 

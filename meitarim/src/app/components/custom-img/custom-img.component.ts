@@ -1,17 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediainterfaces';
-import { Options } from 'ng5-slider';
 
-interface SimpleSliderModel {
-  value: number;
-  options: Options;
-}
-
-interface RangeSliderModel {
-  minValue: number;
-  maxValue: number;
-  options: Options;
-}
 
 @Component({
   selector: 'app-custom-img',
@@ -44,14 +33,6 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
   @Output()
   myOncanplaythrough:EventEmitter<string> = new EventEmitter<string>();
 
-  verticalSlider1: SimpleSliderModel = {
-    value: 0,
-    options: {
-      floor: 0,
-      ceil: 60,
-      vertical: true
-    }
-  }
   constructor() { }
 
   ngOnInit() {
@@ -62,9 +43,16 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
 
   @ViewChild("slider",{static: false})  
   set mainVideoEl(el: ElementRef) {
-        //this._mySlider = el.nativeElement;
+        this._mySlider = el.nativeElement;
+        //this._mySlider.onmousedown = this.setMyNewValue.bind(this);
+        //this._mySlider.onmouseup = this.setMyNewValue.bind(this);
   }
 
+  private _isSliderDisabled = false;
+  disableSlider (event:any){
+    this._isSliderDisabled = true;
+    
+  }
 
   setMyNewValue(newValue:number){
     alert('hi');
@@ -85,7 +73,6 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     if (this.myMax>=this.myValue){
       this.myValue = currentTime;
       this.setMyTopValue();
-      this.verticalSlider1.value = this.myValue;
     }
   }
 
@@ -110,7 +97,7 @@ export class CustomImgComponent implements OnInit,IPlayableMedia {
     this.myMax = this._myOptions.end;
     this.myValue = this._myOptions.start;
     this.myStep = 1;
-    //this.myVisibility = "visible";
+    this.myVisibility = "visible";
   }
   
   getOptions():IPlayableMediaOptions {
