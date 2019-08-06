@@ -120,14 +120,22 @@ public startPlay(){
   private _myTimer: any;
   private _mySpeed: number;
   
+  imgSlederChanged(eventData){
+    this.video1Component.setCurrentPosition(eventData);
+    this.video2Component.setCurrentPosition(eventData);
+    
+
+  }
+
   startUpdateTimer(): void {
     
     if (this._myTimer == undefined){
       this._myTimer = setInterval(() => {
 
         //get video position
-        var currentTime = this.video1Component.myCuurentTime();
+        var currentTime = this.video1Component.myCurrentTime();
         //console.log("currentTime" + currentTime);
+        //TODO  check if video1Component.currenttime and video2Component.currenttime  are syncronized
         if (currentTime<=this._currentDruation){
           this.img1Component.sync(currentTime);
           this.img2Component.sync(currentTime);

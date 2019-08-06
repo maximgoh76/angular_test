@@ -49,7 +49,7 @@ export class CustomVideoComponent implements OnInit,IPlayableMedia {
     return this._myOptions;
   }
   public setCurrentPosition(position: number): void {
-    throw new Error("Method not implemented.");
+    this.videoPlayer.currentTime = position;
   }
 
   constructor() { 
@@ -92,7 +92,7 @@ export class CustomVideoComponent implements OnInit,IPlayableMedia {
     this.videoPlayer.play();
   }
 
-  public myCuurentTime():number{
+  public myCurrentTime():number{
     return this.videoPlayer.currentTime;
   }
 

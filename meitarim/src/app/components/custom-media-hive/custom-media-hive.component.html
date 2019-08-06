@@ -14,15 +14,15 @@
                     </button></td>
                   <td rowspan="2" style="text-align: center">
                     <div style="margin-left: auto;margin-right: auto;width:240px ;align-self: center;text-align: center;">
-                        <app-custom-img (myOncanplaythrough)="mediaLoaded($event)" #img1 ></app-custom-img>
+                        <app-custom-img (myValueChanged)="imgSlederChanged($event)"  (myOncanplaythrough)="mediaLoaded($event)" #img1 ></app-custom-img>
                     </div>
                   </td>
                   <td ><app-custom-video (myOncanplaythrough)="mediaLoaded($event)" #video1 ></app-custom-video></td>
                   <td ><app-custom-video (myOncanplaythrough)="mediaLoaded($event)" #video2 ></app-custom-video></td>
                 </tr>
                 <tr>
-                  <td style="text-align: center"><div style="margin-left: auto;margin-right: auto;width:240px ;align-self: center;"><app-custom-img (myOncanplaythrough)="mediaLoaded($event)" #img2 ></app-custom-img></div></td>
-                  <td style="text-align: center"><div style="margin-left: auto;margin-right: auto;width:240px ;align-self: center;"><app-custom-img (myOncanplaythrough)="mediaLoaded($event)" #img3 ></app-custom-img></div></td>
+                  <td style="text-align: center"><div style="margin-left: auto;margin-right: auto;width:240px ;align-self: center;"><app-custom-img (myValueChanged)="imgSlederChanged($event)" (myOncanplaythrough)="mediaLoaded($event)" #img2 ></app-custom-img></div></td>
+                  <td style="text-align: center"><div style="margin-left: auto;margin-right: auto;width:240px ;align-self: center;"><app-custom-img (myValueChanged)="imgSlederChanged($event)" (myOncanplaythrough)="mediaLoaded($event)" #img3 ></app-custom-img></div></td>
                 </tr>
               </table>
     </div>
