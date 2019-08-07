@@ -3,6 +3,7 @@ import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediai
 import { CustomImgComponent } from '../custom-img/custom-img.component';
 import { CustomVideoComponent } from '../custom-video/custom-video.component';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import { ChatService } from 'src/app/services/chat/chat.service';
 
 @Component({
   selector: 'app-custom-media-hive',
@@ -34,7 +35,29 @@ export class CustomMediaHiveComponent implements OnInit {
   }
 
 
-  constructor() { }
+ 
+
+
+  constructor(private chatService: ChatService) {
+    chatService.messages.subscribe(msg => {
+      alert ("got message");
+      console.log("Response from websocket: " + msg);
+    });
+  }
+
+  private message = {
+    author: "tutorialedge",
+    message: "this is a test message"
+  };
+
+  sendMsg() {
+    console.log("new message from client to websocket: ", this.message);
+    this.chatService.messages.next(this.message);
+    this.message.message = " NEXT ONE";
+  }
+
+
+
 
   ngOnInit() {
     this._mySpeed = 100;
