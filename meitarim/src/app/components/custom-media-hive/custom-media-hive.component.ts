@@ -3,7 +3,7 @@ import { IPlayableMedia, IPlayableMediaOptions } from 'src/app/interfaces/mediai
 import { CustomImgComponent } from '../custom-img/custom-img.component';
 import { CustomVideoComponent } from '../custom-video/custom-video.component';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { ChatService } from 'src/app/services/chat/chat.service';
+import { ChatService, Message } from 'src/app/services/chat/chat.service';
 
 @Component({
   selector: 'app-custom-media-hive',
@@ -13,6 +13,8 @@ import { ChatService } from 'src/app/services/chat/chat.service';
 export class CustomMediaHiveComponent implements OnInit {
   
   @ViewChild("img1",{static: false}) img1Component: CustomImgComponent;
+  @ViewChild("img11",{static: false}) img11Component: CustomImgComponent;
+  
   @ViewChild("img2",{static: false}) img2Component: CustomImgComponent;
   @ViewChild("img3",{static: false}) img3Component: CustomImgComponent;
 
@@ -39,21 +41,45 @@ export class CustomMediaHiveComponent implements OnInit {
 
 
   constructor(private chatService: ChatService) {
-    chatService.messages.subscribe(msg => {
-      alert ("got message");
-      console.log("Response from websocket: " + msg);
-    });
+    
+    let handleMessage = this.handleMessageWs.bind(this);
+    let handleError = this.onErrorWs.bind(this);
+    chatService.messages.subscribe(handleMessage,handleError);
   }
 
-  private message = {
-    author: "tutorialedge",
-    message: "this is a test message"
+  private handleMessageWs(msg){
+    //TODO
+    alert ("got message "+msg);
+    //update this.filesArray[]
+    console.log("Response from websocket: " + msg);
+  }
+
+  private onErrorWs(error){
+     //TODO
+    alert ("Error:" + error);
+    console.log("Error from websocket: " + error);
+  }
+
+
+  private message : Message = {
+    clientId: "client1",
+    fileId: "this is a test message",
+    picDimensions:{
+      x1:100,
+      y1:101,
+      x2:300,
+      y2:500
+    }
   };
 
+
+  private filesArray:any[];
+
   sendMsg() {
-    console.log("new message from client to websocket: ", this.message);
-    this.chatService.messages.next(this.message);
-    this.message.message = " NEXT ONE";
+    console.log("send message ", this.message);
+    this.filesArray = [];
+    this.chatService.messages.next((this.message));
+    //this.message = " NEXT ONE";
   }
 
 
@@ -78,6 +104,19 @@ export class CustomMediaHiveComponent implements OnInit {
           step:1
         }
       );
+
+      this.img11Component.setOptions(
+        {
+          end:this._currentDruation,
+          start:0,
+          height:750, //951
+          width:140,  //257
+          src:"/assets/pictures/specto.png",
+          step:1
+        }
+      );
+
+
 
       this.img2Component.setOptions(
         {
@@ -105,8 +144,8 @@ export class CustomMediaHiveComponent implements OnInit {
         {
           end:this._currentDruation,
           start:0,
-          height:300,
-          width:400,
+          height:250,
+          width:310,
           src:"/assets/moovies/big_buck_bunny.mp4",
           step:1
         }
@@ -115,8 +154,8 @@ export class CustomMediaHiveComponent implements OnInit {
           {
             end:this._currentDruation,
             start:0,
-            height:300,
-            width:400,
+            height:250,
+            width:310,
             src:"/assets/moovies/big_buck_bunny2.mp4",
             step:1
           }
@@ -161,6 +200,7 @@ public startPlay(){
         //TODO  check if video1Component.currenttime and video2Component.currenttime  are syncronized
         if (currentTime<=this._currentDruation){
           this.img1Component.sync(currentTime);
+          this.img11Component.sync(currentTime);
           this.img2Component.sync(currentTime);
           this.img3Component.sync(currentTime);
         }else{

@@ -5,10 +5,21 @@ import { WebsocketService } from "../websocket/websocket.service"
 
 const CHAT_URL = "ws://127.0.0.1:8080/mediaChat";
 
+
+
 export interface Message {
-  author: string;
-  message: string;
+  clientId:string,
+  fileId: string,
+  picDimensions:{
+    x1:number,
+    y1:number,
+    x2:number,
+    y2:number
+  },
+  fileName1?:string,
+  file?:any
 }
+
 
 @Injectable()
 export class ChatService {
@@ -18,12 +29,11 @@ export class ChatService {
     this.messages = <Subject<Message>>wsService.connect(CHAT_URL).map(
       (response: MessageEvent): Message => {
         console.log(response.data)
-        //let data = JSON.parse(response.data);
-        return {
-          author: "a",
-          message: response.data
-        };
+        let data = JSON.parse(response.data);
+        return data;
       }
     );
   }
+
+
 }

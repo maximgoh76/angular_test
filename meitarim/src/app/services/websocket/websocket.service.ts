@@ -19,7 +19,7 @@ export class WebsocketService {
   public connect(url:string): Rx.Subject<MessageEvent> {
     if (!this.subject) {
       this.subject = this.create(url);
-      console.log("Successfully connected: " + url);
+      console.log("WebsocketService successfully connected: " + url);
       this.connected$.next(true);
     }
     return this.subject;
@@ -43,6 +43,8 @@ export class WebsocketService {
       next: (data: Object) => {
         if (ws.readyState === WebSocket.OPEN) {
           ws.send(JSON.stringify(data));
+        }else{
+            alert ("Web socket is not open! (TODO)")
         }
       }
     }

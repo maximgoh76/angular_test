@@ -103,7 +103,7 @@ public class WebSocketCoreExample {
   public static TextMessage handleTextMessage(TextMessage msg) {
     if (msg.isStrict()) // optimization that directly creates a simple response...
     {
-      return TextMessage.create("Hello " + msg.getStrictText());
+      return TextMessage.create(msg.getStrictText());
     } else // ... this would suffice to handle all text messages in a streaming fashion
     {
       return TextMessage.create(Source.single("Hello ").concat(msg.getStreamedText()));
