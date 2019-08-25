@@ -48,7 +48,7 @@ public class WebSocketCoreExample {
 
     if (request.getUri().path().equals("/mediaChat")) {
       final Flow<Message, Message, NotUsed> greeterFlow = greeter();
-      return WebSocket.handleWebSocketRequestWith(request, greeterFlow);
+      return  WebSocket.handleWebSocketRequestWith(request, greeterFlow);
     } else {
       return HttpResponse.create().withStatus(404);
     }
@@ -97,13 +97,15 @@ public class WebSocketCoreExample {
               return handleTextMessage(msg.asTextMessage());
             }
           }
+          
         });
   }
 
   public static TextMessage handleTextMessage(TextMessage msg) {
     if (msg.isStrict()) // optimization that directly creates a simple response...
     {
-      return TextMessage.create(msg.getStrictText());
+    	TextMessage t = TextMessage.create(msg.getStrictText());
+      return t;
     } else // ... this would suffice to handle all text messages in a streaming fashion
     {
       return TextMessage.create(Source.single("Hello ").concat(msg.getStreamedText()));
