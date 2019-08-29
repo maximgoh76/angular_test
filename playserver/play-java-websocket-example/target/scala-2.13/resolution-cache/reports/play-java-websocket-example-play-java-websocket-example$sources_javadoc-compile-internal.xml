@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="play-java-websocket-example"
+		module="play-java-websocket-example$sources_javadoc"
+		revision="1.0"
+		conf="compile-internal"
+		confs="compile, runtime, test, provided, optional, web-assets, web-assets-test, web-plugin, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
+		date="20190829111403"/>
+	<dependencies>
+		<module organisation="org.webjars" name="bootstrap">
+			<revision name="2.3.2" status="release" pubdate="20130530200454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="69">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3738" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\bootstrap\ivy-2.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/bootstrap/2.3.2/bootstrap-2.3.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.3.2" rev-constraint-default="2.3.2" rev-constraint-dynamic="2.3.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="bootstrap" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3624" time="518" location="C:\Users\DELL\.ivy2\cache\org.webjars\bootstrap\srcs\bootstrap-2.3.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/bootstrap/2.3.2/bootstrap-2.3.2-sources.jar"/>
+					</artifact>
+					<artifact name="bootstrap" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="133957" time="972" location="C:\Users\DELL\.ivy2\cache\org.webjars\bootstrap\docs\bootstrap-2.3.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/bootstrap/2.3.2/bootstrap-2.3.2-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="filters-helpers_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619125112" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="66">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3705" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\filters-helpers_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/filters-helpers_2.13/2.7.3/filters-helpers_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="filters-helpers_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="61264" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\filters-helpers_2.13\srcs\filters-helpers_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/filters-helpers_2.13/2.7.3/filters-helpers_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="filters-helpers_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1702985" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\filters-helpers_2.13\docs\filters-helpers_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/filters-helpers_2.13/2.7.3/filters-helpers_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-java-forms_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124923" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="50">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="6047" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java-forms_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-forms_2.13/2.7.3/play-java-forms_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-java-forms_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1210759" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java-forms_2.13\docs\play-java-forms_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-forms_2.13/2.7.3/play-java-forms_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-java-forms_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="32066" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java-forms_2.13\srcs\play-java-forms_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-forms_2.13/2.7.3/play-java-forms_2.13-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hibernate.validator" name="hibernate-validator">
+			<revision name="6.0.16.Final" status="release" pubdate="20190321134224" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="29273" time="0" location="C:\Users\DELL\.ivy2\cache\org.hibernate.validator\hibernate-validator\ivy-6.0.16.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="6.0.16.Final" rev-constraint-default="6.0.16.Final" rev-constraint-dynamic="6.0.16.Final" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="hibernate-validator" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="825085" time="0" location="C:\Users\DELL\.ivy2\cache\org.hibernate.validator\hibernate-validator\srcs\hibernate-validator-6.0.16.Final-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="webjars-play_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190620155736" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/webjars/webjars-play" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="46">
+				<license name="MIT License" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="3886" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-play_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/webjars-play_2.13/2.7.3/webjars-play_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="webjars-play_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1220933" time="2872" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-play_2.13\docs\webjars-play_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-play_2.13/2.7.3/webjars-play_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="webjars-play_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="4303" time="781" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-play_2.13\srcs\webjars-play_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-play_2.13/2.7.3/webjars-play_2.13-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="requirejs">
+			<revision name="2.3.6" status="release" pubdate="20181112142148" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
+				<license name="New BSD" url="https://github.com/jrburke/requirejs/blob/master/LICENSE"/>
+				<license name="MIT" url="https://github.com/jrburke/requirejs/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="3797" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\requirejs\ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/requirejs/2.3.6/requirejs-2.3.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="requirejs" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+					<artifact name="requirejs" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml" name="classmate">
+			<revision name="1.3.4" status="release" pubdate="20170910004804" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/java-classmate" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5781" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml\classmate\ivy-1.3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.3.4/classmate-1.3.4.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.3.4" rev-constraint-default="1.3.4" rev-constraint-dynamic="1.3.4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="classmate" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="47914" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml\classmate\srcs\classmate-1.3.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.3.4/classmate-1.3.4-sources.jar"/>
+					</artifact>
+					<artifact name="classmate" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="280764" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml\classmate\docs\classmate-1.3.4-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.3.4/classmate-1.3.4-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jboss.logging" name="jboss-logging">
+			<revision name="3.3.2.Final" status="release" pubdate="20180214232338" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+				<license name="Apache License, version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="9590" time="0" location="C:\Users\DELL\.ivy2\cache\org.jboss.logging\jboss-logging\ivy-3.3.2.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="3.3.2.Final" rev-constraint-default="3.3.2.Final" rev-constraint-dynamic="3.3.2.Final" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jboss-logging" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="55328" time="0" location="C:\Users\DELL\.ivy2\cache\org.jboss.logging\jboss-logging\srcs\jboss-logging-3.3.2.Final-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final-sources.jar"/>
+					</artifact>
+					<artifact name="jboss-logging" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="140078" time="0" location="C:\Users\DELL\.ivy2\cache\org.jboss.logging\jboss-logging\docs\jboss-logging-3.3.2.Final-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-logback_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124915" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="36">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3336" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-logback_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.13/2.7.3/play-logback_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-logback_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5908" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-logback_2.13\srcs\play-logback_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.13/2.7.3/play-logback_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-logback_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1137734" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-logback_2.13\docs\play-logback_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.13/2.7.3/play-logback_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-context">
+			<revision name="5.1.5.RELEASE" status="release" pubdate="20190213082745" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="5324" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-context\ivy-5.1.5.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="5.1.5.RELEASE" rev-constraint-default="5.1.5.RELEASE" rev-constraint-dynamic="5.1.5.RELEASE" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="spring-context" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="3510215" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-context\docs\spring-context-5.1.5.RELEASE-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE-javadoc.jar"/>
+					</artifact>
+					<artifact name="spring-context" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1051256" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-context\srcs\spring-context-5.1.5.RELEASE-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-context/5.1.5.RELEASE/spring-context-5.1.5.RELEASE-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-beans">
+			<revision name="5.1.5.RELEASE" status="release" pubdate="20190213082723" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3379" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-beans\ivy-5.1.5.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="5.1.5.RELEASE" rev-constraint-default="5.1.5.RELEASE" rev-constraint-dynamic="5.1.5.RELEASE" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="spring-beans" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="633694" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-beans\srcs\spring-beans-5.1.5.RELEASE-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE-sources.jar"/>
+					</artifact>
+					<artifact name="spring-beans" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1980159" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-beans\docs\spring-beans-5.1.5.RELEASE-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-beans/5.1.5.RELEASE/spring-beans-5.1.5.RELEASE-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="flot">
+			<revision name="0.8.3" status="release" pubdate="20140512174738" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="27">
+				<license name="MIT" url="https://github.com/flot/flot/blob/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="4182" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\flot\ivy-0.8.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/flot/0.8.3/flot-0.8.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.8.3" rev-constraint-default="0.8.3" rev-constraint-dynamic="0.8.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="flot" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3538" time="550" location="C:\Users\DELL\.ivy2\cache\org.webjars\flot\srcs\flot-0.8.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/flot/0.8.3/flot-0.8.3-sources.jar"/>
+					</artifact>
+					<artifact name="flot" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="109581" time="622" location="C:\Users\DELL\.ivy2\cache\org.webjars\flot\docs\flot-0.8.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/flot/0.8.3/flot-0.8.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="jquery">
+			<revision name="1.11.1" status="release" pubdate="20140503211849" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+				<license name="MIT License" url="https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3791" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\jquery\ivy-1.11.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.11.1" rev-constraint-default="1.11.1" rev-constraint-dynamic="1.11.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jquery" type="doc" ext="jar" extra-classifier="javadoc" status="failed" details="" size="0" time="0"/>
+					<artifact name="jquery" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3586" time="543" location="C:\Users\DELL\.ivy2\cache\org.webjars\jquery\srcs\jquery-1.11.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/jquery/1.11.1/jquery-1.11.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-core">
+			<revision name="5.1.5.RELEASE" status="release" pubdate="20190213082803" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3910" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-core\ivy-5.1.5.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="5.1.5.RELEASE" rev-constraint-default="5.1.5.RELEASE" rev-constraint-dynamic="5.1.5.RELEASE" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="spring-core" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="2368395" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-core\docs\spring-core-5.1.5.RELEASE-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-javadoc.jar"/>
+					</artifact>
+					<artifact name="spring-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="894317" time="0" location="C:\Users\DELL\.ivy2\cache\org.springframework\spring-core\srcs\spring-core-5.1.5.RELEASE-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-java_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619125008" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4705" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.13/2.7.3/play-java_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-java_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="28699" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java_2.13\srcs\play-java_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.13/2.7.3/play-java_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-java_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1224893" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-java_2.13\docs\play-java_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.13/2.7.3/play-java_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.jodah" name="typetools">
+			<revision name="0.5.0" status="release" pubdate="20170509174904" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/jhalterman/typetools/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+				<license name="Apache License, Version 2.0" url="http://apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3402" time="0" location="C:\Users\DELL\.ivy2\cache\net.jodah\typetools\ivy-0.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/jodah/typetools/0.5.0/typetools-0.5.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="typetools" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5619" time="0" location="C:\Users\DELL\.ivy2\cache\net.jodah\typetools\srcs\typetools-0.5.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/jodah/typetools/0.5.0/typetools-0.5.0-sources.jar"/>
+					</artifact>
+					<artifact name="typetools" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="27304" time="0" location="C:\Users\DELL\.ivy2\cache\net.jodah\typetools\docs\typetools-0.5.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/jodah/typetools/0.5.0/typetools-0.5.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ahc-ws_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619125058" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4430" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws_2.13/2.7.3/play-ahc-ws_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-ahc-ws_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="19374" time="1022" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws_2.13\srcs\play-ahc-ws_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws_2.13/2.7.3/play-ahc-ws_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-ahc-ws_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1258574" time="2656" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws_2.13\docs\play-ahc-ws_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws_2.13/2.7.3/play-ahc-ws_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.cache" name="cache-api">
+			<revision name="1.0.0" status="release" pubdate="20140328063442" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/jsr107/jsr107spec" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
+				<license name="JSR-000107 JCACHE 2.9 Public Review - Updated Specification                 License             " url="https://raw.github.com/jsr107/jsr107spec/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="4107" time="0" location="C:\Users\DELL\.ivy2\cache\javax.cache\cache-api\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/cache/cache-api/1.0.0/cache-api-1.0.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="cache-api" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="84172" time="1009" location="C:\Users\DELL\.ivy2\cache\javax.cache\cache-api\srcs\cache-api-1.0.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/cache/cache-api/1.0.0/cache-api-1.0.0-sources.jar"/>
+					</artifact>
+					<artifact name="cache-api" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="423631" time="993" location="C:\Users\DELL\.ivy2\cache\javax.cache\cache-api\docs\cache-api-1.0.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/cache/cache-api/1.0.0/cache-api-1.0.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ahc-ws-standalone_2.13">
+			<revision name="2.0.6" status="release" pubdate="20190617183841" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4809" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws-standalone_2.13\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws-standalone_2.13/2.0.6/play-ahc-ws-standalone_2.13-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-ahc-ws-standalone_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="57554" time="536" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws-standalone_2.13\srcs\play-ahc-ws-standalone_2.13-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws-standalone_2.13/2.0.6/play-ahc-ws-standalone_2.13-2.0.6-sources.jar"/>
+					</artifact>
+					<artifact name="play-ahc-ws-standalone_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1399284" time="2569" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ahc-ws-standalone_2.13\docs\play-ahc-ws-standalone_2.13-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ahc-ws-standalone_2.13/2.0.6/play-ahc-ws-standalone_2.13-2.0.6-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="shaded-oauth">
+			<revision name="2.0.6" status="release" pubdate="20190617183846" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2526" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-oauth\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-oauth/2.0.6/shaded-oauth-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="shaded-oauth" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="189" time="549" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-oauth\docs\shaded-oauth-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-oauth/2.0.6/shaded-oauth-2.0.6-javadoc.jar"/>
+					</artifact>
+					<artifact name="shaded-oauth" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="258" time="510" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-oauth\srcs\shaded-oauth-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-oauth/2.0.6/shaded-oauth-2.0.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="shaded-asynchttpclient">
+			<revision name="2.0.6" status="release" pubdate="20190617183911" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2556" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-asynchttpclient\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-asynchttpclient/2.0.6/shaded-asynchttpclient-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="shaded-asynchttpclient" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="266" time="517" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-asynchttpclient\srcs\shaded-asynchttpclient-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-asynchttpclient/2.0.6/shaded-asynchttpclient-2.0.6-sources.jar"/>
+					</artifact>
+					<artifact name="shaded-asynchttpclient" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="189" time="748" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\shaded-asynchttpclient\docs\shaded-asynchttpclient-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/shaded-asynchttpclient/2.0.6/shaded-asynchttpclient-2.0.6-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="cachecontrol_2.13">
+			<revision name="1.1.7" status="release" pubdate="20190612155615" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/cachecontrol" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3560" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\cachecontrol_2.13\ivy-1.1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/cachecontrol_2.13/1.1.7/cachecontrol_2.13-1.1.7.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.1.7" rev-constraint-default="1.1.7" rev-constraint-dynamic="1.1.7" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="cachecontrol_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="28075" time="801" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\cachecontrol_2.13\srcs\cachecontrol_2.13-1.1.7-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/cachecontrol_2.13/1.1.7/cachecontrol_2.13-1.1.7-sources.jar"/>
+					</artifact>
+					<artifact name="cachecontrol_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1420615" time="2606" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\cachecontrol_2.13\docs\cachecontrol_2.13-1.1.7-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/cachecontrol_2.13/1.1.7/cachecontrol_2.13-1.1.7-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ws_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124900" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4282" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.13/2.7.3/play-ws_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-ws_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1206911" time="2298" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws_2.13\docs\play-ws_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.13/2.7.3/play-ws_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-ws_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="11145" time="651" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws_2.13\srcs\play-ws_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws_2.13/2.7.3/play-ws_2.13-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-akka-http-server_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124601" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3901" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-akka-http-server_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-akka-http-server_2.13/2.7.3/play-akka-http-server_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-akka-http-server_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1198980" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-akka-http-server_2.13\docs\play-akka-http-server_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-akka-http-server_2.13/2.7.3/play-akka-http-server_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-akka-http-server_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="19203" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-akka-http-server_2.13\srcs\play-akka-http-server_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-akka-http-server_2.13/2.7.3/play-akka-http-server_2.13-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-server_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124617" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="59">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3800" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-server_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.13/2.7.3/play-server_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-server_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="42740" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-server_2.13\srcs\play-server_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.13/2.7.3/play-server_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-server_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1289453" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-server_2.13\docs\play-server_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.13/2.7.3/play-server_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-guice_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619125018" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="75">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3731" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-guice_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-guice_2.13/2.7.3/play-guice_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-guice_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17589" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-guice_2.13\srcs\play-guice_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-guice_2.13/2.7.3/play-guice_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-guice_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1268815" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-guice_2.13\docs\play-guice_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-guice_2.13/2.7.3/play-guice_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.inject.extensions" name="guice-assistedinject">
+			<revision name="4.2.2" status="release" pubdate="20181029192950" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5803" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\ivy-4.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.2.2/guice-assistedinject-4.2.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="4.2.2" rev-constraint-default="4.2.2" rev-constraint-dynamic="4.2.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="guice-assistedinject" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="64789" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\docs\guice-assistedinject-4.2.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.2.2/guice-assistedinject-4.2.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="guice-assistedinject" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="34485" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\srcs\guice-assistedinject-4.2.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.2.2/guice-assistedinject-4.2.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.inject" name="guice">
+			<revision name="4.2.2" status="release" pubdate="20181029192932" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6249" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject\guice\ivy-4.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/inject/guice/4.2.2/guice-4.2.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="4.2.2" rev-constraint-default="4.2.2" rev-constraint-dynamic="4.2.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="guice" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="950934" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject\guice\docs\guice-4.2.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/guice/4.2.2/guice-4.2.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="guice" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="368268" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.inject\guice\srcs\guice-4.2.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/guice/4.2.2/guice-4.2.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="aopalliance" name="aopalliance">
+			<revision name="1.0" status="release" pubdate="20070227004340" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://aopalliance.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
+				<license name="Public Domain"/>
+				<metadata-artifact status="no" details="" size="2447" time="0" location="C:\Users\DELL\.ivy2\cache\aopalliance\aopalliance\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="aopalliance" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="21188" time="0" location="C:\Users\DELL\.ivy2\cache\aopalliance\aopalliance\srcs\aopalliance-1.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619125045" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="7860" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.7.3/play_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="6029570" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play_2.13\docs\play_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.7.3/play_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="play_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="529882" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play_2.13\srcs\play_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.7.3/play_2.13-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.transaction" name="jta">
+			<revision name="1.1" status="release" pubdate="20081028032721" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/jta" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
+				<metadata-artifact status="no" details="" size="2508" time="0" location="C:\Users\DELL\.ivy2\cache\javax.transaction\jta\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jta" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="25014" time="0" location="C:\Users\DELL\.ivy2\cache\javax.transaction\jta\srcs\jta-1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.xml.bind" name="jaxb-api">
+			<revision name="2.3.1" status="release" pubdate="20180912162852" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
+				<license name="CDDL 1.1" url="https://oss.oracle.com/licenses/CDDL+GPL-1.1"/>
+				<license name="GPL2 w/ CPE" url="https://oss.oracle.com/licenses/CDDL+GPL-1.1"/>
+				<metadata-artifact status="no" details="" size="4255" time="0" location="C:\Users\DELL\.ivy2\cache\javax.xml.bind\jaxb-api\ivy-2.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.3.1" rev-constraint-default="2.3.1" rev-constraint-dynamic="2.3.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jaxb-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="805339" time="0" location="C:\Users\DELL\.ivy2\cache\javax.xml.bind\jaxb-api\docs\jaxb-api-2.3.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1-javadoc.jar"/>
+					</artifact>
+					<artifact name="jaxb-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="271123" time="0" location="C:\Users\DELL\.ivy2\cache\javax.xml.bind\jaxb-api\srcs\jaxb-api-2.3.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.jsonwebtoken" name="jjwt">
+			<revision name="0.9.1" status="release" pubdate="20180706015143" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/jwtk/jjwt" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="5996" time="0" location="C:\Users\DELL\.ivy2\cache\io.jsonwebtoken\jjwt\ivy-0.9.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.9.1" rev-constraint-default="0.9.1" rev-constraint-dynamic="0.9.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jjwt" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="114965" time="0" location="C:\Users\DELL\.ivy2\cache\io.jsonwebtoken\jjwt\srcs\jjwt-0.9.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1-sources.jar"/>
+					</artifact>
+					<artifact name="jjwt" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="506298" time="0" location="C:\Users\DELL\.ivy2\cache\io.jsonwebtoken\jjwt\docs\jjwt-0.9.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="27.1-jre" status="release" pubdate="20190308182054" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7927" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\guava\ivy-27.1-jre.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/27.1-jre/guava-27.1-jre.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="27.1-jre" rev-constraint-default="27.1-jre" rev-constraint-dynamic="27.1-jre" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="guava" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1637380" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\guava\srcs\guava-27.1-jre-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/27.1-jre/guava-27.1-jre-sources.jar"/>
+					</artifact>
+					<artifact name="guava" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="6636068" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\guava\docs\guava-27.1-jre-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/guava/27.1-jre/guava-27.1-jre-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.mojo" name="animal-sniffer-annotations">
+			<revision name="1.17" status="release" pubdate="20180622042035" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5185" time="0" location="C:\Users\DELL\.ivy2\cache\org.codehaus.mojo\animal-sniffer-annotations\ivy-1.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.17" rev-constraint-default="1.17" rev-constraint-dynamic="1.17" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="animal-sniffer-annotations" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="371119" time="0" location="C:\Users\DELL\.ivy2\cache\org.codehaus.mojo\animal-sniffer-annotations\docs\animal-sniffer-annotations-1.17-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17-javadoc.jar"/>
+					</artifact>
+					<artifact name="animal-sniffer-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4003" time="0" location="C:\Users\DELL\.ivy2\cache\org.codehaus.mojo\animal-sniffer-annotations\srcs\animal-sniffer-annotations-1.17-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.errorprone" name="error_prone_annotations">
+			<revision name="2.2.0" status="release" pubdate="20180109012952" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4144" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.errorprone\error_prone_annotations\ivy-2.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="error_prone_annotations" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="111817" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.errorprone\error_prone_annotations\docs\error_prone_annotations-2.2.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="error_prone_annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="25517" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.errorprone\error_prone_annotations\srcs\error_prone_annotations-2.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.checkerframework" name="checker-qual">
+			<revision name="2.5.2" status="release" pubdate="20180601215723" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://checkerframework.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
+				<license name="The MIT License" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="2696" time="0" location="C:\Users\DELL\.ivy2\cache\org.checkerframework\checker-qual\ivy-2.5.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="checker-qual" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="223283" time="0" location="C:\Users\DELL\.ivy2\cache\org.checkerframework\checker-qual\srcs\checker-qual-2.5.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2-sources.jar"/>
+					</artifact>
+					<artifact name="checker-qual" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1284484" time="0" location="C:\Users\DELL\.ivy2\cache\org.checkerframework\checker-qual\docs\checker-qual-2.5.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.findbugs" name="jsr305">
+			<revision name="3.0.2" status="release" pubdate="20170331075548" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3301" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.code.findbugs\jsr305\ivy-3.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="3.0.2" rev-constraint-default="3.0.2" rev-constraint-dynamic="3.0.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jsr305" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="18102" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.code.findbugs\jsr305\srcs\jsr305-3.0.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar"/>
+					</artifact>
+					<artifact name="jsr305" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="172992" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.code.findbugs\jsr305\docs\jsr305-3.0.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="failureaccess">
+			<revision name="1.0.1" status="release" pubdate="20181119195727" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6411" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\failureaccess\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="failureaccess" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="3493" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\failureaccess\srcs\failureaccess-1.0.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar"/>
+					</artifact>
+					<artifact name="failureaccess" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="34915" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.guava\failureaccess\docs\failureaccess-1.0.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-slf4j_2.13">
+			<revision name="2.5.23" status="release" pubdate="20190611012121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io/" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3545" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.13\ivy-2.5.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.5.23/akka-slf4j_2.13-2.5.23.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.5.23" rev-constraint-default="2.5.23" rev-constraint-dynamic="2.5.23" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23"/>
+				<artifacts>
+					<artifact name="akka-slf4j_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2629" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.13\srcs\akka-slf4j_2.13-2.5.23-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.5.23/akka-slf4j_2.13-2.5.23-sources.jar"/>
+					</artifact>
+					<artifact name="akka-slf4j_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1162804" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.13\docs\akka-slf4j_2.13-2.5.23-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.5.23/akka-slf4j_2.13-2.5.23-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jul-to-slf4j">
+			<revision name="1.7.26" status="release" pubdate="20190219012021" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5409" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jul-to-slf4j\ivy-1.7.26.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.7.26" rev-constraint-default="1.7.26" rev-constraint-dynamic="1.7.26" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jul-to-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6169" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jul-to-slf4j\srcs\jul-to-slf4j-1.7.26-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26-sources.jar"/>
+					</artifact>
+					<artifact name="jul-to-slf4j" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="40017" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jul-to-slf4j\docs\jul-to-slf4j-1.7.26-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="twirl-api_2.13">
+			<revision name="1.4.2" status="release" pubdate="20190612105659" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="68">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2976" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\twirl-api_2.13\ivy-1.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.13/1.4.2/twirl-api_2.13-1.4.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.4.2" rev-constraint-default="1.4.2" rev-constraint-dynamic="1.4.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="twirl-api_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1361495" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\twirl-api_2.13\docs\twirl-api_2.13-1.4.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.13/1.4.2/twirl-api_2.13-1.4.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="twirl-api_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="9454" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\twirl-api_2.13\srcs\twirl-api_2.13-1.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.13/1.4.2/twirl-api_2.13-1.4.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-streams_2.13">
+			<revision name="2.7.3" status="release" pubdate="20190619124436" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4352" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-streams_2.13\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.13/2.7.3/play-streams_2.13-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-streams_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15609" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-streams_2.13\srcs\play-streams_2.13-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.13/2.7.3/play-streams_2.13-2.7.3-sources.jar"/>
+					</artifact>
+					<artifact name="play-streams_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1168053" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-streams_2.13\docs\play-streams_2.13-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.13/2.7.3/play-streams_2.13-2.7.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="build-link">
+			<revision name="2.7.3" status="release" pubdate="20190619125452" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2899" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\build-link\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.7.3/build-link-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="build-link" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="38388" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\build-link\docs\build-link-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.7.3/build-link-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="build-link" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4194" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\build-link\srcs\build-link-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.7.3/build-link-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-exceptions">
+			<revision name="2.7.3" status="release" pubdate="20190619125249" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2727" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.7.3/play-exceptions-2.7.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0" extra-info.apiURL="https://www.playframework.com/documentation/2.7.3/api/scala/index.html"/>
+				<artifacts>
+					<artifact name="play-exceptions" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="36029" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-exceptions\docs\play-exceptions-2.7.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.7.3/play-exceptions-2.7.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-exceptions" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2324" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-exceptions\srcs\play-exceptions-2.7.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.7.3/play-exceptions-2.7.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ws-standalone-json_2.13">
+			<revision name="2.0.6" status="release" pubdate="20190617183833" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4042" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-json_2.13\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-json_2.13/2.0.6/play-ws-standalone-json_2.13-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-ws-standalone-json_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1154490" time="1554" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-json_2.13\docs\play-ws-standalone-json_2.13-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-json_2.13/2.0.6/play-ws-standalone-json_2.13-2.0.6-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-ws-standalone-json_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="3783" time="558" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-json_2.13\srcs\play-ws-standalone-json_2.13-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-json_2.13/2.0.6/play-ws-standalone-json_2.13-2.0.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-json_2.13">
+			<revision name="2.7.4" status="release" pubdate="20190612134530" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4748" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-json_2.13\ivy-2.7.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.7.4/play-json_2.13-2.7.4.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.4" rev-constraint-default="2.7.4" rev-constraint-dynamic="2.7.4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-json_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="2053447" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-json_2.13\docs\play-json_2.13-2.7.4-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.7.4/play-json_2.13-2.7.4-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-json_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="53631" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-json_2.13\srcs\play-json_2.13-2.7.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.13/2.7.4/play-json_2.13-2.7.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-classic">
+			<revision name="1.2.3" status="release" pubdate="20170331222753" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="10512" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="logback-classic" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="230201" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-classic\srcs\logback-classic-1.2.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar"/>
+					</artifact>
+					<artifact name="logback-classic" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1045814" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-classic\docs\logback-classic-1.2.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8">
+			<revision name="2.9.8" status="release" pubdate="20181216010617" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="29617" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\ivy-2.9.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.9.8" rev-constraint-default="2.9.8" rev-constraint-dynamic="2.9.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jdk8" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="19319" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\srcs\jackson-datatype-jdk8-2.9.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8-sources.jar"/>
+					</artifact>
+					<artifact name="jackson-datatype-jdk8" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="121307" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\docs\jackson-datatype-jdk8-2.9.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.8/jackson-datatype-jdk8-2.9.8-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
+			<revision name="2.9.8" status="release" pubdate="20181215231249" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="7945" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\ivy-2.9.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.8/jackson-annotations-2.9.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.9.8" rev-constraint-default="2.9.8" rev-constraint-dynamic="2.9.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-annotations" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="399404" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\docs\jackson-annotations-2.9.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.8/jackson-annotations-2.9.8-javadoc.jar"/>
+					</artifact>
+					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="68199" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\srcs\jackson-annotations-2.9.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.8/jackson-annotations-2.9.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.10.1" status="release" pubdate="20181027215121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
+				<license name="Apache 2" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6955" time="0" location="C:\Users\DELL\.ivy2\cache\joda-time\joda-time\ivy-2.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.10.1/joda-time-2.10.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.10.1" rev-constraint-default="2.10.1" rev-constraint-dynamic="2.10.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="joda-time" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1388198" time="0" location="C:\Users\DELL\.ivy2\cache\joda-time\joda-time\docs\joda-time-2.10.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.10.1/joda-time-2.10.1-javadoc.jar"/>
+					</artifact>
+					<artifact name="joda-time" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="804319" time="0" location="C:\Users\DELL\.ivy2\cache\joda-time\joda-time\srcs\joda-time-2.10.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.10.1/joda-time-2.10.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-functional_2.13">
+			<revision name="2.7.4" status="release" pubdate="20190612134515" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2718" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-functional_2.13\ivy-2.7.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.13/2.7.4/play-functional_2.13-2.7.4.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.7.4" rev-constraint-default="2.7.4" rev-constraint-dynamic="2.7.4" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-functional_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1353702" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-functional_2.13\docs\play-functional_2.13-2.7.4-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.13/2.7.4/play-functional_2.13-2.7.4-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-functional_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="9924" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-functional_2.13\srcs\play-functional_2.13-2.7.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.13/2.7.4/play-functional_2.13-2.7.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-http-core_2.13">
+			<revision name="10.1.8" status="release" pubdate="20190611091157" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io" extra-info.apiURL="https://doc.akka.io/api/akka-http/10.1.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<license name="Apache-2.0" url="https://opensource.org/licenses/Apache-2.0"/>
+				<metadata-artifact status="no" details="" size="3838" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-http-core_2.13\ivy-10.1.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.13/10.1.8/akka-http-core_2.13-10.1.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="10.1.8" rev-constraint-default="10.1.8" rev-constraint-dynamic="10.1.8" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka-http/10.1.8/"/>
+				<artifacts>
+					<artifact name="akka-http-core_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="6624237" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-http-core_2.13\docs\akka-http-core_2.13-10.1.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.13/10.1.8/akka-http-core_2.13-10.1.8-javadoc.jar"/>
+					</artifact>
+					<artifact name="akka-http-core_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="434544" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-http-core_2.13\srcs\akka-http-core_2.13-10.1.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core_2.13/10.1.8/akka-http-core_2.13-10.1.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-parsing_2.13">
+			<revision name="10.1.8" status="release" pubdate="20190611090940" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io" extra-info.apiURL="https://doc.akka.io/api/akka-http/10.1.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+				<license name="Apache-2.0" url="https://opensource.org/licenses/Apache-2.0"/>
+				<metadata-artifact status="no" details="" size="3214" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-parsing_2.13\ivy-10.1.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.13/10.1.8/akka-parsing_2.13-10.1.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="10.1.8" rev-constraint-default="10.1.8" rev-constraint-dynamic="10.1.8" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka-http/10.1.8/"/>
+				<artifacts>
+					<artifact name="akka-parsing_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="65195" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-parsing_2.13\srcs\akka-parsing_2.13-10.1.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.13/10.1.8/akka-parsing_2.13-10.1.8-sources.jar"/>
+					</artifact>
+					<artifact name="akka-parsing_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="2515814" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-parsing_2.13\docs\akka-parsing_2.13-10.1.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing_2.13/10.1.8/akka-parsing_2.13-10.1.8-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jcl-over-slf4j">
+			<revision name="1.7.26" status="release" pubdate="20190219011850" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5422" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jcl-over-slf4j\ivy-1.7.26.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.7.26" rev-constraint-default="1.7.26" rev-constraint-dynamic="1.7.26" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jcl-over-slf4j" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="106413" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jcl-over-slf4j\docs\jcl-over-slf4j-1.7.26-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26-javadoc.jar"/>
+					</artifact>
+					<artifact name="jcl-over-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="24688" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\jcl-over-slf4j\srcs\jcl-over-slf4j-1.7.26-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ws-standalone-xml_2.13">
+			<revision name="2.0.6" status="release" pubdate="20190617183816" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4044" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-xml_2.13\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-xml_2.13/2.0.6/play-ws-standalone-xml_2.13-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-ws-standalone-xml_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1157298" time="1728" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-xml_2.13\docs\play-ws-standalone-xml_2.13-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-xml_2.13/2.0.6/play-ws-standalone-xml_2.13-2.0.6-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-ws-standalone-xml_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="4838" time="576" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone-xml_2.13\srcs\play-ws-standalone-xml_2.13-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone-xml_2.13/2.0.6/play-ws-standalone-xml_2.13-2.0.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-xml_2.13">
+			<revision name="1.2.0" status="release" pubdate="20190607192354" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3303" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-xml_2.13\ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scala-xml_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="111728" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-xml_2.13\srcs\scala-xml_2.13-1.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0-sources.jar"/>
+					</artifact>
+					<artifact name="scala-xml_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="2606796" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-xml_2.13\docs\scala-xml_2.13-1.2.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-ws-standalone_2.13">
+			<revision name="2.0.6" status="release" pubdate="20190617183814" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ws" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="4162" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone_2.13\ivy-2.0.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone_2.13/2.0.6/play-ws-standalone_2.13-2.0.6.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.6" rev-constraint-default="2.0.6" rev-constraint-dynamic="2.0.6" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="play-ws-standalone_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1355215" time="1992" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone_2.13\docs\play-ws-standalone_2.13-2.0.6-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone_2.13/2.0.6/play-ws-standalone_2.13-2.0.6-javadoc.jar"/>
+					</artifact>
+					<artifact name="play-ws-standalone_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="27393" time="816" location="C:\Users\DELL\.ivy2\cache\com.typesafe.play\play-ws-standalone_2.13\srcs\play-ws-standalone_2.13-2.0.6-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-ws-standalone_2.13/2.0.6/play-ws-standalone_2.13-2.0.6-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-core">
+			<revision name="1.2.3" status="release" pubdate="20170331222715" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="7994" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-core\ivy-1.2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.2.3" rev-constraint-default="1.2.3" rev-constraint-dynamic="1.2.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="logback-core" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1975248" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-core\docs\logback-core-1.2.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="logback-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="399141" time="0" location="C:\Users\DELL\.ivy2\cache\ch.qos.logback\logback-core\srcs\logback-core-1.2.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-stream_2.13">
+			<revision name="2.5.23" status="release" pubdate="20190611012243" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io/" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3738" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-stream_2.13\ivy-2.5.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.13/2.5.23/akka-stream_2.13-2.5.23.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.5.23" rev-constraint-default="2.5.23" rev-constraint-dynamic="2.5.23" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23"/>
+				<artifacts>
+					<artifact name="akka-stream_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="7385747" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-stream_2.13\docs\akka-stream_2.13-2.5.23-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.13/2.5.23/akka-stream_2.13-2.5.23-javadoc.jar"/>
+					</artifact>
+					<artifact name="akka-stream_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="522571" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-stream_2.13\srcs\akka-stream_2.13-2.5.23-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream_2.13/2.5.23/akka-stream_2.13-2.5.23-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.reactivestreams" name="reactive-streams">
+			<revision name="1.0.2" status="release" pubdate="20171218220638" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.reactive-streams.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+				<license name="CC0" url="http://creativecommons.org/publicdomain/zero/1.0/"/>
+				<metadata-artifact status="no" details="" size="2553" time="0" location="C:\Users\DELL\.ivy2\cache\org.reactivestreams\reactive-streams\ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="reactive-streams" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="381810" time="0" location="C:\Users\DELL\.ivy2\cache\org.reactivestreams\reactive-streams\docs\reactive-streams-1.0.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="reactive-streams" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="3997" time="0" location="C:\Users\DELL\.ivy2\cache\org.reactivestreams\reactive-streams\srcs\reactive-streams-1.0.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-protobuf_2.13">
+			<revision name="2.5.23" status="release" pubdate="20190611010328" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io/" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3004" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-protobuf_2.13\ivy-2.5.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.13/2.5.23/akka-protobuf_2.13-2.5.23.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.5.23" rev-constraint-default="2.5.23" rev-constraint-dynamic="2.5.23" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23"/>
+				<artifacts>
+					<artifact name="akka-protobuf_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="277039" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-protobuf_2.13\srcs\akka-protobuf_2.13-2.5.23-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.13/2.5.23/akka-protobuf_2.13-2.5.23-sources.jar"/>
+					</artifact>
+					<artifact name="akka-protobuf_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1277904" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-protobuf_2.13\docs\akka-protobuf_2.13-2.5.23-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-protobuf_2.13/2.5.23/akka-protobuf_2.13-2.5.23-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.13">
+			<revision name="2.5.23" status="release" pubdate="20190611010557" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://akka.io/" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3298" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-actor_2.13\ivy-2.5.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.5.23/akka-actor_2.13-2.5.23.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.5.23" rev-constraint-default="2.5.23" rev-constraint-dynamic="2.5.23" callerrev="1.0" extra-info.apiURL="https://doc.akka.io/api/akka/2.5.23"/>
+				<artifacts>
+					<artifact name="akka-actor_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="8512262" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-actor_2.13\docs\akka-actor_2.13-2.5.23-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.5.23/akka-actor_2.13-2.5.23-javadoc.jar"/>
+					</artifact>
+					<artifact name="akka-actor_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="575606" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe.akka\akka-actor_2.13\srcs\akka-actor_2.13-2.5.23-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.5.23/akka-actor_2.13-2.5.23-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.13">
+			<revision name="0.9.0" status="release" pubdate="20190608155219" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3067" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.13\ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scala-java8-compat_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1172760" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.13\docs\scala-java8-compat_2.13-0.9.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0-javadoc.jar"/>
+					</artifact>
+					<artifact name="scala-java8-compat_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="24626" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.13\srcs\scala-java8-compat_2.13-0.9.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="ssl-config-core_2.13">
+			<revision name="0.3.8" status="release" pubdate="20190615152736" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lightbend/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3756" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe\ssl-config-core_2.13\ivy-0.3.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.3.8/ssl-config-core_2.13-0.3.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.3.8" rev-constraint-default="0.3.8" rev-constraint-dynamic="0.3.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="ssl-config-core_2.13" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="49354" time="1090" location="C:\Users\DELL\.ivy2\cache\com.typesafe\ssl-config-core_2.13\srcs\ssl-config-core_2.13-0.3.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.3.8/ssl-config-core_2.13-0.3.8-sources.jar"/>
+					</artifact>
+					<artifact name="ssl-config-core_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1629918" time="2299" location="C:\Users\DELL\.ivy2\cache\com.typesafe\ssl-config-core_2.13\docs\ssl-config-core_2.13-0.3.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.3.8/ssl-config-core_2.13-0.3.8-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="1.9.2" status="release" pubdate="20170920190437" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-convert/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6352" time="0" location="C:\Users\DELL\.ivy2\cache\org.joda\joda-convert\ivy-1.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.9.2/joda-convert-1.9.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="joda-convert" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="102157" time="588" location="C:\Users\DELL\.ivy2\cache\org.joda\joda-convert\docs\joda-convert-1.9.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.9.2/joda-convert-1.9.2-javadoc.jar"/>
+					</artifact>
+					<artifact name="joda-convert" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="54616" time="615" location="C:\Users\DELL\.ivy2\cache\org.joda\joda-convert\srcs\joda-convert-1.9.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.9.2/joda-convert-1.9.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.3.3" status="release" pubdate="20180221160821" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lightbend/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2909" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe\config\ivy-1.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.3.3" rev-constraint-default="1.3.3" rev-constraint-dynamic="1.3.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="config" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="462870" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe\config\docs\config-1.3.3-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-javadoc.jar"/>
+					</artifact>
+					<artifact name="config" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="172783" time="0" location="C:\Users\DELL\.ivy2\cache\com.typesafe\config\srcs\config-1.3.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.13">
+			<revision name="1.1.2" status="release" pubdate="20190607213535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2962" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.13\ivy-1.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.2/scala-parser-combinators_2.13-1.1.2.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.1.2" rev-constraint-default="1.1.2" rev-constraint-dynamic="1.1.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scala-parser-combinators_2.13" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="48190" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.13\srcs\scala-parser-combinators_2.13-1.1.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.2/scala-parser-combinators_2.13-1.1.2-sources.jar"/>
+					</artifact>
+					<artifact name="scala-parser-combinators_2.13" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1630485" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.13\docs\scala-parser-combinators_2.13-1.1.2-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.13/1.1.2/scala-parser-combinators_2.13-1.1.2-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.validation" name="validation-api">
+			<revision name="2.0.1.Final" status="release" pubdate="20171219182341" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://beanvalidation.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3464" time="0" location="C:\Users\DELL\.ivy2\cache\javax.validation\validation-api\ivy-2.0.1.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.0.1.Final" rev-constraint-default="2.0.1.Final" rev-constraint-dynamic="2.0.1.Final" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="validation-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="97838" time="0" location="C:\Users\DELL\.ivy2\cache\javax.validation\validation-api\srcs\validation-api-2.0.1.Final-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-sources.jar"/>
+					</artifact>
+					<artifact name="validation-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="752028" time="0" location="C:\Users\DELL\.ivy2\cache\javax.validation\validation-api\docs\validation-api-2.0.1.Final-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="webjars-locator">
+			<revision name="0.36" status="release" pubdate="20190201175813" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="MIT" url="https://github.com/webjars/webjars-locator/blob/master/LICENSE.md"/>
+				<metadata-artifact status="no" details="" size="4993" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator\ivy-0.36.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/webjars-locator/0.36/webjars-locator-0.36.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.36" rev-constraint-default="0.36" rev-constraint-dynamic="0.36" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="webjars-locator" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="25121" time="1045" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator\docs\webjars-locator-0.36-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-locator/0.36/webjars-locator-0.36-javadoc.jar"/>
+					</artifact>
+					<artifact name="webjars-locator" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="6739" time="529" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator\srcs\webjars-locator-0.36-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-locator/0.36/webjars-locator-0.36-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="webjars-locator-core">
+			<revision name="0.37" status="release" pubdate="20190201175347" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="MIT" url="https://github.com/webjars/webjars-locator-core/blob/master/LICENSE.md"/>
+				<metadata-artifact status="no" details="" size="6611" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator-core\ivy-0.37.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/webjars-locator-core/0.37/webjars-locator-core-0.37.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="0.37" rev-constraint-default="0.37" rev-constraint-dynamic="0.37" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="webjars-locator-core" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="76862" time="697" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator-core\docs\webjars-locator-core-0.37-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-locator-core/0.37/webjars-locator-core-0.37-javadoc.jar"/>
+					</artifact>
+					<artifact name="webjars-locator-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="13301" time="698" location="C:\Users\DELL\.ivy2\cache\org.webjars\webjars-locator-core\srcs\webjars-locator-core-0.37-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/webjars-locator-core/0.37/webjars-locator-core-0.37-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-compress">
+			<revision name="1.18" status="release" pubdate="20180813102452" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="16275" time="0" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-compress\ivy-1.18.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.18" rev-constraint-default="1.18" rev-constraint-dynamic="1.18" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-compress" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="541624" time="1623" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-compress\srcs\commons-compress-1.18-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18-sources.jar"/>
+					</artifact>
+					<artifact name="commons-compress" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="2427010" time="5714" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-compress\docs\commons-compress-1.18-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.18/commons-compress-1.18-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.inject" name="javax.inject">
+			<revision name="1" status="release" pubdate="20091014013500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2536" time="0" location="C:\Users\DELL\.ivy2\cache\javax.inject\javax.inject\ivy-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="javax.inject" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="32609" time="0" location="C:\Users\DELL\.ivy2\cache\javax.inject\javax.inject\docs\javax.inject-1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-javadoc.jar"/>
+					</artifact>
+					<artifact name="javax.inject" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10928" time="0" location="C:\Users\DELL\.ivy2\cache\javax.inject\javax.inject\srcs\javax.inject-1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.8.1" status="release" pubdate="20180919182429" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="15052" time="0" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-lang3\ivy-3.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="3.8.1" rev-constraint-default="3.8.1" rev-constraint-dynamic="3.8.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="553442" time="1084" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-lang3\srcs\commons-lang3-3.8.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar"/>
+					</artifact>
+					<artifact name="commons-lang3" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="1337352" time="3097" location="C:\Users\DELL\.ivy2\cache\org.apache.commons\commons-lang3\docs\commons-lang3-3.8.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.13.0" status="release" pubdate="20190607140157" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.scala-lang.org/" extra-info.apiURL="https://www.scala-lang.org/api/2.13.0/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2866" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.13.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.0/scala-reflect-2.13.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.13.0" rev-constraint-default="2.13.0" rev-constraint-dynamic="2.13.0" callerrev="1.0" extra-info.apiURL="https://www.scala-lang.org/api/2.13.0/"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="630937" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-reflect\srcs\scala-reflect-2.13.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.0/scala-reflect-2.13.0-sources.jar"/>
+					</artifact>
+					<artifact name="scala-reflect" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="5938516" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-reflect\docs\scala-reflect-2.13.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.0/scala-reflect-2.13.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.13.0" status="release" pubdate="20190607140246" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.scala-lang.org/" extra-info.apiURL="https://www.scala-lang.org/api/2.13.0/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="15">
+				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2691" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-library\ivy-2.13.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.13.0" rev-constraint-default="2.13.0" rev-constraint-dynamic="2.13.0" callerrev="1.0" extra-info.apiURL="https://www.scala-lang.org/api/2.13.0/"/>
+				<artifacts>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="990929" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.13.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0-sources.jar"/>
+					</artifact>
+					<artifact name="scala-library" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="27767242" time="0" location="C:\Users\DELL\.ivy2\cache\org.scala-lang\scala-library\docs\scala-library-2.13.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.j2objc" name="j2objc-annotations">
+			<revision name="1.1" status="release" pubdate="20170119010659" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/google/j2objc/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3207" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.j2objc\j2objc-annotations\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="j2objc-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10481" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.j2objc\j2objc-annotations\srcs\j2objc-annotations-1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-sources.jar"/>
+					</artifact>
+					<artifact name="j2objc-annotations" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="68979" time="0" location="C:\Users\DELL\.ivy2\cache\com.google.j2objc\j2objc-annotations\docs\j2objc-annotations-1.1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.26" status="release" pubdate="20190219011602" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5346" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.26.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.7.26" rev-constraint-default="1.7.26" rev-constraint-dynamic="1.7.26" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="249516" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\slf4j-api\docs\slf4j-api-1.7.26-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-javadoc.jar"/>
+					</artifact>
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="58090" time="0" location="C:\Users\DELL\.ivy2\cache\org.slf4j\slf4j-api\srcs\slf4j-api-1.7.26-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
+			<revision name="2.9.8" status="release" pubdate="20181216010628" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="29911" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\ivy-2.9.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.9.8" rev-constraint-default="2.9.8" rev-constraint-dynamic="2.9.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jsr310" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="67246" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\srcs\jackson-datatype-jsr310-2.9.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8-sources.jar"/>
+					</artifact>
+					<artifact name="jackson-datatype-jsr310" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="358644" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\docs\jackson-datatype-jsr310-2.9.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.8/jackson-datatype-jsr310-2.9.8-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
+			<revision name="2.9.8" status="release" pubdate="20181215235940" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="23761" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\ivy-2.9.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.9.8" rev-constraint-default="2.9.8" rev-constraint-dynamic="2.9.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-databind" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="5222559" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\docs\jackson-databind-2.9.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8-javadoc.jar"/>
+					</artifact>
+					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="996534" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\srcs\jackson-databind-2.9.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
+			<revision name="2.9.8" status="release" pubdate="20181215231934" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="23044" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\ivy-2.9.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="2.9.8" rev-constraint-default="2.9.8" rev-constraint-dynamic="2.9.8" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="336570" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\srcs\jackson-core-2.9.8-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8-sources.jar"/>
+					</artifact>
+					<artifact name="jackson-core" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="1115149" time="0" location="C:\Users\DELL\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\docs\jackson-core-2.9.8-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.8/jackson-core-2.9.8-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.activation" name="javax.activation-api">
+			<revision name="1.2.0" status="release" pubdate="20170907021319" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="CDDL/GPLv2+CE" url="https://github.com/javaee/activation/blob/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="5303" time="0" location="C:\Users\DELL\.ivy2\cache\javax.activation\javax.activation-api\ivy-1.2.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="1.2.0" rev-constraint-default="1.2.0" rev-constraint-dynamic="1.2.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="javax.activation-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="78896" time="0" location="C:\Users\DELL\.ivy2\cache\javax.activation\javax.activation-api\srcs\javax.activation-api-1.2.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar"/>
+					</artifact>
+					<artifact name="javax.activation-api" type="doc" ext="jar" extra-classifier="javadoc" status="no" details="" size="135429" time="0" location="C:\Users\DELL\.ivy2\cache\javax.activation\javax.activation-api\docs\javax.activation-api-1.2.0-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="explorercanvas">
+			<revision name="r3-1" status="release" pubdate="20140512174251" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="0">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3643" time="0" location="C:\Users\DELL\.ivy2\cache\org.webjars\explorercanvas\ivy-r3-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/webjars/explorercanvas/r3-1/explorercanvas-r3-1.pom"/>
+				<caller organisation="play-java-websocket-example" name="play-java-websocket-example$sources_javadoc" conf="compile-internal, compile, provided, optional" rev="r3-1" rev-constraint-default="r3-1" rev-constraint-dynamic="r3-1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="explorercanvas" type="src" ext="jar" extra-classifier="sources" status="failed" details="" size="0" time="0"/>
+					<artifact name="explorercanvas" type="doc" ext="jar" extra-classifier="javadoc" status="successful" details="" size="12828" time="570" location="C:\Users\DELL\.ivy2\cache\org.webjars\explorercanvas\docs\explorercanvas-r3-1-javadoc.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/webjars/explorercanvas/r3-1/explorercanvas-r3-1-javadoc.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
