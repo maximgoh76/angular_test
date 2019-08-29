@@ -13,6 +13,8 @@ import java.util.concurrent.CompletionStage;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.max.myserver.job.MessagesManager;
+
 import akka.NotUsed;
 import akka.http.impl.util.JavaMapping;
 import akka.http.javadsl.ConnectHttp;
@@ -21,21 +23,25 @@ import akka.http.javadsl.model.ws.WebSocketRequest;
 import akka.http.javadsl.settings.ClientConnectionSettings;
 import akka.http.javadsl.settings.ServerSettings;
 import akka.http.javadsl.settings.WebSocketSettings;
+import akka.http.scaladsl.model.ws.TextMessage.Strict;
 import akka.japi.Function;
 import akka.japi.JavaPartialFunction;
 
 import akka.stream.ActorMaterializer;
 import akka.stream.Materializer;
 import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Sink;
 import akka.stream.javadsl.Source;
-
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.model.ws.Message;
 import akka.http.javadsl.model.ws.TextMessage;
+import akka.http.javadsl.model.ws.UpgradeToWebSocket;
 import akka.http.javadsl.model.ws.WebSocket;
 import akka.util.ByteString;
 
@@ -43,23 +49,45 @@ import akka.util.ByteString;
 public class WebSocketCoreExample {
 
   //#websocket-handling
-  public static HttpResponse handleRequest(HttpRequest request) {
-    System.out.println("Handling request to " + request.getUri());
+//  public static HttpResponse handleRequest(HttpRequest request) {
+//    System.out.println("Handling request to " + request.getUri());
+//
+//    if (request.getUri().path().equals("/mediaChat")) {
+//      final Flow<Message, Message, NotUsed> greeterFlow = greeter();
+//      //greeterFlow.sou
+//     
+//      return  WebSocket.handleWebSocketRequestWith(request, greeterFlow);
+//    } else {
+//      return HttpResponse.create().withStatus(404);
+//    }
+//  }
+private static AtomicInteger connections = new AtomicInteger(0);//connected clients count.
 
-    if (request.getUri().path().equals("/mediaChat")) {
-      final Flow<Message, Message, NotUsed> greeterFlow = greeter();
-      return  WebSocket.handleWebSocketRequestWith(request, greeterFlow);
-    } else {
-      return HttpResponse.create().withStatus(404);
-    }
-  }
-  //#websocket-handling
-
+  static ActorSystem system = null;
+  static Materializer materializer = null;
+  final ActorRef ref = null;
+  
   public static void main(String[] args) throws Exception {
-    ActorSystem system = ActorSystem.create();
+    system = ActorSystem.create();
 
     try {
-      final Materializer materializer = ActorMaterializer.create(system);
+    	Thread one = new Thread() {
+    	    public void run() {
+    	        try {
+    	        	while (true) {
+	    	            System.out.println("Send message");
+	    	            if (source!=null)
+	    	            	source.intersperse("{\"Hello\":\"HELLO\"}");
+	    	            Thread.sleep(1000);
+	    	        }
+    	        } catch(InterruptedException v) {
+    	            System.out.println(v);
+    	        }
+    	    }  
+    	};
+    	//one.start();
+    	
+      materializer = ActorMaterializer.create(system);
 
       final Function<HttpRequest, HttpResponse> handler = request -> handleRequest(request);
       CompletionStage<ServerBinding> serverBindingFuture =
@@ -73,6 +101,9 @@ public class WebSocketCoreExample {
     } finally {
       system.terminate();
     }
+    
+    
+    
   }
 
   //#websocket-handler
@@ -81,36 +112,116 @@ public class WebSocketCoreExample {
    * A handler that treats incoming messages as a name,
    * and responds with a greeting to that name
    */
+//  public static Flow<Message, Message, NotUsed> greeter() {
+//    return
+//      Flow.<Message>create()
+//        .collect(new JavaPartialFunction<Message, Message>() {
+//          @Override
+//          public Message apply(Message msg, boolean isCheck) throws Exception {
+//            if (isCheck) {
+//              if (msg.isText()) {
+//                return null;
+//              } else {
+//                throw noMatch();
+//              }
+//            } else {
+//              return handleTextMessage(msg.asTextMessage());
+//            }
+//          }
+//          
+//        });
+//  }
+  
+  
+//  private Flow<Message, Message, NotUsed> greeter(final String routerId) {
+//
+//	    final ActorRef connection = system.actorOf(WebsocketConnectionActor.props(connectionManager));
+//
+//	    final Source<Message, NotUsed> source = Source.<RouterWireMessage.Outbound>actorRef(5, OverflowStrategy.fail())
+//	            .map((outbound) -> (Message) TextMessage.create(new String(outbound.message, "utf-8")))
+//	            .throttle(5, FiniteDuration.create(1, TimeUnit.SECONDS), 10, ThrottleMode.shaping())
+//	            .mapMaterializedValue(destinationRef -> {
+//	                connection.tell(new RouterConnected(routerId, destinationRef), ActorRef.noSender());
+//	                return NotUsed.getInstance();
+//	            });
+//
+//	    final Sink<Message, NotUsed> sink = Flow.<Message>create()
+//	            .map((inbound) -> new RouterWireMessage.Inbound(inbound.asTextMessage().getStrictText().getBytes()))
+//	            .throttle(5, FiniteDuration.create(1, TimeUnit.SECONDS), 10, ThrottleMode.shaping())
+//	            .to(Sink.actorRef(connection, PoisonPill.getInstance()));
+//
+//	    return Flow.fromSinkAndSource(sink, source);
+//	}
+  
+  
+  
+  
+  
+  
+  public static HttpResponse handleRequest(HttpRequest request) {
+	  HttpResponse result;
+	  if (request.getUri().path().equals("/mediaChat")) {
+	    final Flow<Message, Message, NotUsed> greeterFlow = greeter().watchTermination((nu, cd) -> {
+	      connections.incrementAndGet();
+	      cd.whenComplete((done, throwable) -> connections.decrementAndGet());
+	      return nu;
+	    });
+	    
+	   
+	    result = WebSocket.handleWebSocketRequestWith(request, greeterFlow);
+	    
+	    
+	  } else {
+	    result = HttpResponse.create().withStatus(413);
+	  }
+	  return result;
+	}
+  //#websocket-handling
+  
   public static Flow<Message, Message, NotUsed> greeter() {
-    return
-      Flow.<Message>create()
-        .collect(new JavaPartialFunction<Message, Message>() {
-          @Override
-          public Message apply(Message msg, boolean isCheck) throws Exception {
-            if (isCheck) {
-              if (msg.isText()) {
-                return null;
-              } else {
-                throw noMatch();
-              }
-            } else {
-              return handleTextMessage(msg.asTextMessage());
-            }
-          }
-          
-        });
-  }
+	  
+	  Source<Message, ActorRef> jobManagerSource =
+			    Source.actorPublisher(MessagesManager.props());
 
+			final ActorRef ref =
+					jobManagerSource
+			        .map(
+			            elem -> {
+			              System.out.println(elem);
+			              return elem;
+			            })
+			        .to(Sink.ignore())
+			        .run(materializer);
+
+			ref.tell("asdasdasd", ActorRef.noSender());
+			ref.tell("message2", ActorRef.noSender());
+			ref.tell("message3", ActorRef.noSender());
+	  
+	  return Flow.fromSinkAndSource(Sink.ignore(),
+			  jobManagerSource)  ;
+	 
+	  ////Source.single(new akka.http.scaladsl.model.ws.TextMessage.Strict("{\"a\":\"a\"}"))
+	}
+  
+  
+  
+  public static Source<String,NotUsed> source = null; 
   public static TextMessage handleTextMessage(TextMessage msg) {
     if (msg.isStrict()) // optimization that directly creates a simple response...
     {
+    	
     	TextMessage t = TextMessage.create(msg.getStrictText());
-      return t;
+        return t;
     } else // ... this would suffice to handle all text messages in a streaming fashion
     {
-      return TextMessage.create(Source.single("Hello ").concat(msg.getStreamedText()));
+      source = Source.single("Hello ").concat(msg.getStreamedText());
+      
+      return TextMessage.create(source);
     }
   }
+  
+  
+  
   //#websocket-handler
 
   {
