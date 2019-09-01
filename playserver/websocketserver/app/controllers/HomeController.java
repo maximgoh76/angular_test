@@ -17,5 +17,7 @@ public class HomeController extends Controller {
     public Result index() {
         return ok(views.html.index.render());
     }
-
+    public WebSocket ws() {
+        return WebSocket.Text.accept(request -> ActorFlow.actorRef((out) -> WebSocketActor.props(out), actorSystem, materializer));
+    }
 }

@@ -13,3 +13,10 @@ In sbt use the command eclipse to create Eclipse project files
 > eclipse
 
 In Eclipse use the Import Wizard to import Existing Projects into Workspace
+
+set JAVA_HOME
+///////////////////-Dhttp.port-9443
+sbt  -jvm-debug 9999 
+run
+
+PROTOCOL BUFFERS
