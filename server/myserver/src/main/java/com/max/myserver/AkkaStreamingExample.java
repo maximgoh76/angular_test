@@ -247,10 +247,8 @@ public class AkkaStreamingExample {
 
 		 actorRefSourcePair.first().tell("Hello!", ActorRef.noSender());
 
-		 
 		 // pass source around for materialization
 		 final CompletionStage<Done> comp= actorRefSourcePair.second().runWith(Sink.foreach(System.out::println), materializer);
-		 
 		 
 		 actorRefSourcePair.first().tell("MAX!", ActorRef.noSender());
 		 comp.thenRun(()-> {

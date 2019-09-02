@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.max.myserver.job.MessagesManager;
 import com.max.myserver.job.MyWebSocketActor;
 
+import akka.Done;
 import akka.NotUsed;
 import akka.http.impl.util.JavaMapping;
 import akka.http.javadsl.ConnectHttp;
@@ -28,10 +29,15 @@ import akka.http.javadsl.settings.WebSocketSettings;
 import akka.http.scaladsl.model.ws.TextMessage.Strict;
 import akka.japi.Function;
 import akka.japi.JavaPartialFunction;
-
+import akka.japi.Pair;
 import akka.stream.ActorMaterializer;
+import akka.stream.CompletionStrategy;
 import akka.stream.Materializer;
+import akka.stream.OverflowStrategy;
+import akka.stream.javadsl.BroadcastHub;
 import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Keep;
+import akka.stream.javadsl.MergeHub;
 import akka.stream.javadsl.Sink;
 import akka.stream.javadsl.Source;
 import akka.actor.ActorRef;
@@ -47,6 +53,7 @@ import akka.http.javadsl.model.ws.TextMessage;
 import akka.http.javadsl.model.ws.UpgradeToWebSocket;
 import akka.http.javadsl.model.ws.WebSocket;
 import akka.util.ByteString;
+import scala.util.Success;
 
 @SuppressWarnings({"Convert2MethodRef", "ConstantConditions"})
 public class WebSocketCoreExample {
@@ -95,19 +102,28 @@ private static AtomicInteger connections = new AtomicInteger(0);//connected clie
 	    	           				  }).concat(Source.maybe());
 	    	            	
 	    	            	greeterFlowGen
-		    	              .runWith(out, Sink.ignore(), materializer);
+		    	              .runWith(out, Sink.head(), materializer);
 	    	            }
-	    	      
+//	    	      
 	    	          
-	    	            
-	    	            Thread.sleep(1000);
+//	    	            if (sourceRef!=null) {
+//	    	            	
+//		    	            ActorRef actorRef =  sourceRef.to(Sink.ignore()).run(materializer);
+//		    	      	  	actorRef.tell(TextMessage.create("{\"a\":\"aaa\"}"), ActorRef.noSender());
+//		    	      	  	actorRef.tell(TextMessage.create("{\"b\":\"bbb\"}"), ActorRef.noSender());
+//	    	            }
+//	    	            if ( actorRefSourcePair!=null) {
+//	    	            	
+//	    	            	actorRefSourcePair.first().tell(TextMessage.create("{\"a\":\"aaa\"}"), ActorRef.noSender());
+//	    	            }
+	    	            Thread.sleep(3000);
 	    	        }
     	        } catch(InterruptedException v) {
     	            System.out.println(v);
     	        }
     	    }  
     	};
-    	//one.start();
+    	one.start();
     	
       materializer = ActorMaterializer.create(system);
 
@@ -200,46 +216,60 @@ private static AtomicInteger connections = new AtomicInteger(0);//connected clie
 //	}
   //#websocket-handling
   
-  
-  public static Flow<Message, Message, NotUsed> greeter() {
+  static Source<Message, ActorRef> sourceRef = null;
+  public static Flow<Message, Message, NotUsed> greeterOLD() {
 	  // Log events to the console
 	  Sink<Message, ?> in = Sink.foreach(
 			  (i) ->{
 				   System.out.println(i.asTextMessage().getStrictText());
-				   if (greeterFlowGen!=null) {
-	   	            	//Source<Double, NotUsed> flow = Source.single(input).via(tested);
-	   	            	ArrayList<Message> a = new ArrayList<Message>();
-	   	            	a.add(TextMessage.create("{\"a\":\"aaa\"}"));
-	   	            	a.add(TextMessage.create("{\"b\":\"bbb\"}"));
-	   	            	Source<Message, NotUsed> out  = Source.from(a)
-	   	           			  .map((j)->{
-	   	           				  return (Message)j;
-	   	           				  }).concat(Source.maybe());
-	   	            	
-	   	            	greeterFlowGen
-		    	              .runWith(out, Sink.ignore(), materializer);
-	   	            }
+//				   if (greeterFlowGen!=null) {
+//	   	            	//Source<Double, NotUsed> flow = Source.single(input).via(tested);
+//	   	            	ArrayList<Message> a = new ArrayList<Message>();
+//	   	            	a.add(TextMessage.create("{\"a\":\"aaa\"}"));
+//	   	            	a.add(TextMessage.create("{\"b\":\"bbb\"}"));
+//	   	            	Source<Message, NotUsed> out  = Source.from(a)
+//	   	           			  .map((j)->{
+//	   	           				  return (Message)j;
+//	   	           				  }).concat(Source.maybe());
+//	   	            	
+//	   	            	greeterFlowGen
+//		    	              .runWith(out, Sink.ignore(), materializer);
+//	   	            }
 					   
 				   
 				  }
 			  )
 		;
 	
+	  
+	  
+	  int bufferSize = 1;
+	  sourceRef = Source.actorRef(bufferSize, OverflowStrategy.dropHead());
+
+	 //ActorRef actorRef =  source.to(Sink.foreach(System.out::println)).run(materializer);
+	
+
+	  // The stream completes successfully with the following message
+	  //actorRef.tell(new Success(CompletionStrategy.draining()), ActorRef.noSender());
+	  
+	  
+	  
 	  // Send a single 'Hello!' message and then leave the socket open
 	  //Source<Message, NotUsed> out  = Source.fromFuture(Futures.successful(TextMessage.create("{\"a\":\"aaa\"}")))
 	  //	  .map((i)->{
 	  //		  return (Message)i;
 	  //		  }).concat(Source.maybe());//Source.actorPublisher(MyWebSocketActor.props(self()));//(TextMessage.create("{\"a\":\"aaa\"}")); // Source.single("Hello!").concat(Source.maybe());
 	  
-		ArrayList<Message> a = new ArrayList<Message>();
-    	a.add(TextMessage.create("{\"a\":\"aaa\"}"));
-    	a.add(TextMessage.create("{\"b\":\"bbb\"}"));
-    	Source<Message, NotUsed> out  = Source.from(a)
-   			  .map((i)->{
-   				  return (Message)i;
-   				  }).concat(Source.maybe());
+//		ArrayList<Message> a = new ArrayList<Message>();
+//    	a.add(TextMessage.create("{\"a\":\"aaa\"}"));
+//    	a.add(TextMessage.create("{\"b\":\"bbb\"}"));
+//    	Source<Message, NotUsed> out  = Source.from(a)
+//   			  .map((i)->{
+//   				  return (Message)i;
+//   				  }).concat(Source.maybe());
     	
-	  return Flow.fromSinkAndSource(in, out);
+	  //return Flow.fromSinkAndSource(in, sourceRef);
+	  return Flow.fromSinkAndSource(Sink.ignore(), sourceRef);
   }
   
 //  public static Flow<Message, Message, NotUsed> greeter() {
@@ -267,6 +297,99 @@ private static AtomicInteger connections = new AtomicInteger(0);//connected clie
 //	  ////Source.single(new akka.http.scaladsl.model.ws.TextMessage.Strict("{\"a\":\"a\"}"))
 //	}
 //  
+  
+  
+  public static Flow<Message, Message, NotUsed> greeterOld2() {
+	  Pair<Sink<Message, NotUsed>, Source<Message, NotUsed>> sinkSourcePair =
+	          MergeHub.of(Message.class, 16)
+	          .toMat(BroadcastHub.of(Message.class, 256), Keep.both())
+	          .run(materializer);
+	
+	  Sink<Message, NotUsed> hubSink = sinkSourcePair.first();
+	  Source<Message, NotUsed> hubSource = sinkSourcePair.second().concat(Source.maybe());
+	  
+	  Sink<Message, CompletionStage<Done>> jsonSink = Sink.foreach((Message message) -> {
+	      // When the user types in a stock in the upper right corner, this is triggered,
+	      String msg = message.asTextMessage().getStrictText();
+	      System.out.println(msg);
+	      //addStocks(Collections.singleton(symbol));
+	  });
+ 
+
+		  // Put the source and sink together to make a flow of hub source as output (aggregating all
+		  // stocks as JSON to the browser) and the actor as the sink (receiving any JSON messages
+		  // from the browse), using a coupled sink and source.
+		  //this.websocketFlow = 
+	  
+	  	  return Flow.fromSinkAndSourceCoupled(jsonSink, hubSource)
+		          //.log("actorWebsocketFlow", logger)
+		          .watchTermination((n, stage) -> {
+		              // When the flow shuts down, make sure this actor also stops.
+		        	  System.out.println("TERMINATION");
+		        	  
+		        	  //TODO  terminate stream
+		              //stage.thenAccept(f -> context().stop(self()));
+		              return NotUsed.getInstance();
+		          });
+  }
+  
+  
+  
+  
+  static Pair<ActorRef, Source<Message, NotUsed>> actorRefSourcePair = null;
+  
+  
+  public static Flow<Message, Message, NotUsed> greeter() {
+	  
+	 Source<Message, ActorRef> source = Source.actorRef(100, OverflowStrategy.dropHead());
+
+	 actorRefSourcePair = source.concat(Source.maybe()).preMaterialize(materializer);
+
+	 
+	  
+	  Sink<Message, ?> in = Sink.foreach(
+			  (i) ->{
+				   System.out.println(i.asTextMessage().getStrictText());
+//				   if (greeterFlowGen!=null) {
+//	   	            	//Source<Double, NotUsed> flow = Source.single(input).via(tested);
+//	   	            	ArrayList<Message> a = new ArrayList<Message>();
+//	   	            	a.add(TextMessage.create("{\"a\":\"aaa\"}"));
+//	   	            	a.add(TextMessage.create("{\"b\":\"bbb\"}"));
+//	   	            	Source<Message, NotUsed> out  = Source.from(a)
+//	   	           			  .map((j)->{
+//	   	           				  return (Message)j;
+//	   	           				  }).concat(Source.maybe());
+//	   	            	
+//	   	            	greeterFlowGen
+//		    	              .runWith(out, Sink.ignore(), materializer);
+//	   	            }
+					   
+				   
+				  }
+			  )
+		;
+	
+	 
+//	 return Flow.fromSinkAndSourceCoupled(in, source)
+//	          //.log("actorWebsocketFlow", logger)
+//	          .watchTermination((n, stage) -> {
+//	              // When the flow shuts down, make sure this actor also stops.
+//	        	  System.out.println("TERMINATION");
+//	        	  
+//	        	  //TODO  terminate stream
+//	              //stage.thenAccept(f -> context().stop(self()));
+//	              return NotUsed.getInstance();
+//	          });
+
+	 return  Flow.fromSinkAndSourceMat(in, source, Keep.right()).watchTermination((n, stage) -> {
+         // When the flow shuts down, make sure this actor also stops.
+   	  System.out.println("TERMINATION");
+   	  
+   	  //TODO  terminate stream
+         //stage.thenAccept(f -> context().stop(self()));
+         return NotUsed.getInstance();
+     });
+  }
   
   
   public static Source<String,NotUsed> source = null; 
