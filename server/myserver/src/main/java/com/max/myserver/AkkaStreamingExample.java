@@ -12,6 +12,7 @@ import akka.stream.Materializer;
 import akka.stream.OverflowStrategy;
 import akka.stream.SinkShape;
 import akka.stream.UniformFanOutShape;
+import akka.stream.impl.Timers.Completion;
 import akka.stream.javadsl.Broadcast;
 import akka.stream.javadsl.FileIO;
 import akka.stream.javadsl.Flow;
@@ -28,6 +29,8 @@ import java.math.BigInteger;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
@@ -51,7 +54,8 @@ public class AkkaStreamingExample {
 		 //example5(materializer,system);
 		 //example7(materializer,system);
 		 //exampleGraph1(materializer,system);
-		 exampleGraph2(materializer,system);
+		 //exampleGraph2(materializer,system);
+		 example10(materializer,system);
 	 }
 	 
 	 
@@ -259,4 +263,49 @@ public class AkkaStreamingExample {
 		 comp.thenAccept(a->System.out.println("DONE: " + a) );
 	 }
 	
+	 
+	 
+	 
+	 private static Flow<Integer, Double, NotUsed> computeAverage() {
+	        return Flow.of(Integer.class).grouped(2).mapAsyncUnordered(8, integers ->
+	                CompletableFuture.supplyAsync(() -> integers
+	                        .stream()
+	                        .mapToDouble(v -> v)
+	                        .average()
+	                        .orElse(-1.0)));
+	   }
+	 
+	 private static CompletionStage<Tweet> getTweet(Tweet t){
+		
+		  CompletableFuture<Tweet> a =  new CompletableFuture<Tweet>();
+		  System.out.println("HI:" + t.body);
+		  a.complete((t)); //Optional.of
+		  return a;
+	 }
+	 
+	 public static void example10(Materializer materializer,ActorSystem system) {
+		 
+		   final Hashtag AKKA = new Hashtag("#akka");
+		   
+		   Tweet t1 = new Tweet(new Author("Max"), 1212, "fds #akka sfsd fds");
+		   Tweet t2 = new Tweet(new Author("Dan"), 2342, "fds #skka sfsd MAX");
+		   Tweet t3 = new Tweet(new Author("Max"), 234234, "MAX #akka  fds");
+
+		  // CompletionStage<Optional<Tweet>> a = new 
+				   
+		   //Source.from(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+		   Source<Tweet, NotUsed> tweets = 
+				   Source.from(Arrays.asList(t1,t2,t3))
+				   .mapAsyncUnordered(5, (t) -> {
+					   CompletableFuture<Tweet> a =  new CompletableFuture<Tweet>();
+						  a.complete((t)); //Optional.of
+						  return a;
+				   });
+				     
+		   final CompletionStage<Done> result = tweets.runForeach(a -> System.out.println(a.body), materializer);
+			 result.thenRun(()-> {
+				 System.out.println("DONE");
+				 system.terminate();
+			 });
+	 }
 }

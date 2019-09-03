@@ -8,6 +8,7 @@ import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 
+
 public class WebSocketActor extends AbstractActor {
 
     private final ActorRef out;
@@ -26,7 +27,8 @@ public class WebSocketActor extends AbstractActor {
                 .build();
     }
 
-    public static Props props(final ActorRef out) {
-        return Props.create(WebSocketActor.class, out);
-    }
+//    public static Props props(final ActorRef out) {
+//    	 return Props.create(WebSocketActor.class);
+//    	 // return Props.create(WebSocketActor.class, out);
+//    }
 }
