@@ -3,34 +3,35 @@ package com.max.myserver.bl;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
+import akka.dispatch.MessageDispatcher;
+
 
 public class MediaCreator implements IFileReadyCallBack {
 	private String txtInput = null;
 	int fileCount = 0;
 	int FILES_COUNT_TOTAL= 5;
-	
+	MessageDispatcher executionContext = null;
 	IFileReadyCallBack callbackClass = null;
 	
-	public MediaCreator(String input,IFileReadyCallBack callbackClass) {
+	public MediaCreator(String input,IFileReadyCallBack callbackClass,MessageDispatcher executionContext) {
 		this.txtInput = input;
 		this.callbackClass = callbackClass;
+		this.executionContext = executionContext;
 	}
 	
 	public CompletionStage<Boolean> runAsync(){
-		
 		CompletableFuture<Boolean> cf = new CompletableFuture<Boolean>();
+		//FilesCreatorMockup filesCreator = new FilesCreatorMockup(this);
+		//filesCreator.start();
 		
-		FilesCreator filesCreator = new FilesCreator(this);
-		filesCreator.start();
+		CompletableFuture.supplyAsync(  ()->{
+			FilesCreatorMockup filesCreator2 = new FilesCreatorMockup(this);
+			filesCreator2.run();
+			cf.complete(new Boolean(true));
+			return new Boolean(true);
+		},executionContext);
 		
-//		CompletableFuture.supplyAsync(  ()->{
-//			FilesCreator filesCreator = new FilesCreator(this);
-//			filesCreator.run();
-//			cf.complete(new Boolean(true));
-//			return new Boolean(true);
-//		});
-		System.out.println("continue async after call to run");
-		cf.complete(true);
+		//cf.complete(true);
 		return cf;
 	}
 
@@ -39,7 +40,7 @@ public class MediaCreator implements IFileReadyCallBack {
 	@Override
 	public synchronized void setFileStatus(String fileName,boolean succeded, String filePath, String error) {
 		fileCount ++;
-		callbackClass.setFileStatus(fileName, succeded, filePath, error);
+		callbackClass.setFileStatus("file" + fileCount, succeded, filePath, error);
 		if (fileCount==FILES_COUNT_TOTAL) {
 			System.out.println("Files Creation Done");
 		}

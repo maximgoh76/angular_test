@@ -1,4 +1,4 @@
-package com.max.myserver;
+package com.max.test;
 
 import akka.Done;
 import akka.NotUsed;

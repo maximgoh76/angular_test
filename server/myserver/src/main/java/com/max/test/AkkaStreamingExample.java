@@ -1,4 +1,4 @@
-package com.max.myserver;
+package com.max.test;
 
 import akka.NotUsed;
 import akka.actor.ActorRef;
@@ -34,9 +34,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
-import com.max.myserver.data.Author;
-import com.max.myserver.data.Hashtag;
-import com.max.myserver.data.Tweet;
+import com.max.test.data.Author;
+import com.max.test.data.Hashtag;
+import com.max.test.data.Tweet;
 
 //import jdocs.AbstractJavaTest;
 

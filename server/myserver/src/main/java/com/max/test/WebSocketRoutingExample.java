@@ -1,4 +1,4 @@
-package com.max.myserver;
+package com.max.test;
 
 import akka.NotUsed;
 import akka.http.javadsl.server.AllDirectives;

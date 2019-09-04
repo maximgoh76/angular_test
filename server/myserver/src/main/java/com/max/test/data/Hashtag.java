@@ -1,4 +1,4 @@
-package com.max.myserver.data;
+package com.max.test.data;
 
 public class Hashtag {
 	  public final String name;

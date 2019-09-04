@@ -17,7 +17,9 @@ import akka.stream.Materializer;
 import akka.stream.impl.fusing.Log;
 import akka.stream.javadsl.Flow;
 import akka.stream.javadsl.Source;
+import scala.languageFeature.existentials;
 import akka.actor.ActorSystem;
+import akka.dispatch.MessageDispatcher;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
@@ -28,15 +30,22 @@ import akka.http.javadsl.model.ws.WebSocket;
 
 import com.max.myserver.bl.Logger;
 import com.max.myserver.bl.SessionManager;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 
 public class MediaServer {
 
  public static void main(String[] args) throws Exception {
-	    ActorSystem system = ActorSystem.create();
-
+	 
+	    Config conf = ConfigFactory.load("application.conf");
+	    //System.out.println("myParam"+ conf.getString("akka.myParam"));
+	    ActorSystem system = ActorSystem.create("akka", conf);
+	    
+	    final MessageDispatcher executionContext = system.dispatchers().lookup("akka.my-dispatcher");
+	    
 	    try {
 	      final Materializer materializer = ActorMaterializer.create(system);
-	      final Function<HttpRequest, HttpResponse> handler = request -> handleRequest(request);
+	      final Function<HttpRequest, HttpResponse> handler = request -> handleRequest(request,materializer,executionContext);
 	      CompletionStage<ServerBinding> serverBindingFuture =
 	        Http.get(system).bindAndHandleSync(
 	          handler, ConnectHttp.toHost("localhost", 8080), materializer);
@@ -53,11 +62,11 @@ public class MediaServer {
   }
 	
   //#websocket-handling
-  public static HttpResponse handleRequest(HttpRequest request) {
+  public static HttpResponse handleRequest(HttpRequest request,Materializer materializer,MessageDispatcher executionContext) {
 	  try {
 		  System.out.println("Handling request to " + request.getUri());
 		    if (request.getUri().path().equals("/mediaChat")) {
-		    	SessionManager sessionManager = new SessionManager();
+		    	SessionManager sessionManager = new SessionManager(materializer,executionContext);
 			    final Flow<Message, Message, NotUsed> greeterFlow = sessionManager.createGreeter();
 			    return WebSocket.handleWebSocketRequestWith(request, greeterFlow);
 		    } else {

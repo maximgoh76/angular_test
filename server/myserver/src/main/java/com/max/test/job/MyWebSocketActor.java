@@ -1,4 +1,4 @@
-package com.max.myserver.job;
+package com.max.test.job;
 
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;

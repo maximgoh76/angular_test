@@ -1,4 +1,4 @@
-package com.max.myserver.data;
+package com.max.test.data;
 
 import java.util.Arrays;
 import java.util.Set;

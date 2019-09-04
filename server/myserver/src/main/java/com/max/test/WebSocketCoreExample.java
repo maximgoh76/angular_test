@@ -1,4 +1,4 @@
-package com.max.myserver;
+package com.max.test;
 
 /*
  * Copyright (C) 2009-2019 Lightbend Inc. <https://www.lightbend.com>
@@ -14,8 +14,8 @@ import java.util.concurrent.CompletionStage;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.max.myserver.job.MessagesManager;
-import com.max.myserver.job.MyWebSocketActor;
+import com.max.test.job.MessagesManager;
+import com.max.test.job.MyWebSocketActor;
 
 import akka.Done;
 import akka.NotUsed;
