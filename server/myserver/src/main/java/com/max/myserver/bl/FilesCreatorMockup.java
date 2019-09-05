@@ -1,5 +1,7 @@
 package com.max.myserver.bl;
 
+import com.max.myserver.data.FileData;
+
 public class FilesCreatorMockup extends Thread  {
 
 	IFileReadyCallBack callbackClass;
@@ -10,13 +12,30 @@ public class FilesCreatorMockup extends Thread  {
 	@Override
 	public void run() {
 			try {
-				callbackClass.setFileStatus("file5", true, "fiel5.jpg", null);
-				callbackClass.setFileStatus("file4", true, "fiel4.jpg", null);
-				Thread.sleep(2000);				
-				callbackClass.setFileStatus("file3", true, "fiel3.jpg", null);
-				callbackClass.setFileStatus("file2", true, "fiel2.jpg", null);
-				Thread.sleep(2000);
-				callbackClass.setFileStatus("file1", true, "fiel1.jpg", null);
+				Thread.sleep(3000);				
+				FileData f1= new FileData("dos");
+				f1.setFilePath("dos.png");
+				callbackClass.setFileStatus("file5", true, f1, null);
+				f1= new FileData("tdo");
+				f1.setFilePath("dos.png");
+				callbackClass.setFileStatus("file4", true, f1, null);
+				Thread.sleep(3000);			
+				f1= new FileData("ars");
+				f1.setFilePath("ars.png");
+				callbackClass.setFileStatus("file3", true, f1, null);
+				f1= new FileData("art");
+				f1.setFilePath("ars.png");
+				callbackClass.setFileStatus("file2", true, f1, null);
+				Thread.sleep(3000);
+				
+				f1= new FileData("arp");
+				f1.setFilePath("arp.png");
+				callbackClass.setFileStatus("file0", true, f1, null);
+				
+				Thread.sleep(3000);
+				f1= new FileData("tcs");
+				f1.setFilePath("arp.png");
+				callbackClass.setFileStatus("file1", true, f1, null);
 //				CompletableFuture.supplyAsync(()->{
 //					callbackClass.setFileStatus("file5", true, "fiel5.jpg", null);
 //					return true;

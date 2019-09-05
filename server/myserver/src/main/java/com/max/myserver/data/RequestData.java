@@ -1,6 +1,6 @@
 package com.max.myserver.data;
 
-public class FilesRequestData {
+public class RequestData {
 	private String sourceFileName;
 	private int time1;
 	private int time2;
@@ -36,5 +36,4 @@ public class FilesRequestData {
 	public void setFreq2(int freq2) {
 		this.freq2 = freq2;
 	}
-	
 }
