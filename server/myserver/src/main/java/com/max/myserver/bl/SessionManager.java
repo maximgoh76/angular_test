@@ -1,19 +1,15 @@
 package com.max.myserver.bl;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
-
 import com.max.myserver.data.Constants;
 import com.max.myserver.data.FileData;
 import com.max.myserver.data.QueueItem;
-
 import akka.NotUsed;
 import akka.dispatch.MessageDispatcher;
 import akka.http.javadsl.model.ws.Message;
 import akka.http.javadsl.model.ws.TextMessage;
-import akka.japi.JavaPartialFunction;
 import akka.stream.Materializer;
 import akka.stream.javadsl.Flow;
 import akka.stream.javadsl.Source;
@@ -33,39 +29,38 @@ public class SessionManager implements IFileReadyCallBack {
 	}
 	
 	/*
-	 *create flow of  Constants.FILES_COUNT_TOTAL items based on one 
-	 *file request
+	 *create flow template of Constants.FILES_COUNT_TOTAL items based on one 
+	 *file request.
 	 */
 	public  Flow<Message, Message, NotUsed> createGreeter() {
-	     Flow<Message, Message, NotUsed> flow = 
-	    		  Flow.<Message>create()
-	    		  .mapConcat (m-> this.startFileCreationAsyncAndModifyOutput(m))
-	    		  .collect(new JavaPartialFunction<Message, Message>() {
-	    	          @Override
-	    	          public  Message apply(Message msg, boolean isCheck) throws Exception {
-	    	            if (isCheck) {
-	    	              if (msg.isText()) {
-	    	                return null;
-	    	              } else {
-	    	                throw noMatch();
-	    	              }
-	    	            } else {
-	    	              return handleTextMessage(msg.asTextMessage());
-	    	            }
-	    	          }
-	    	        });
-	     return flow;    
-	  }
+	  return Flow.of(Message.class)
+	  .mapConcat (m-> this.startFileCreationAsyncAndModifyOutput(m))
+	  .map(m->m.asTextMessage())
+	  .mapAsyncUnordered(10, (t) -> {
+			   CompletableFuture<Optional<FileData>> complStage =  new CompletableFuture<Optional<FileData>> ();
+			   updateFileInQueue(t.getStrictText(), complStage, null);
+			   //System.out.println("in mapAsyncUnordered: " +t.getStrictText());
+			   return complStage;
+		   })
+		   .filter(o -> o.isPresent())
+		   .map(o1->o1.get())
+		   //.buffer(5, OverflowStrategy.backpressure())
+		   .map(t->{
+			   //System.out.println("file out: " + t.getFileName());
+			   return TextMessage.create(t.toJson());
+		   });	  
+	 
+	}
+
+
 	
 	/*
-	 * start media file creation process
-	 * Create Queue of Constants.FILES_COUNT_TOTAL files
-	 * in order to handle file creation callbacks
+	 * Initialize array of files to create
+	 * and start file creation
 	 */
 	public Iterable<Message> startFileCreationAsyncAndModifyOutput (Message msg) {
 		
 		ArrayList<Message> arrMessages = new ArrayList<Message>();
-		
 		if ((msg==null) ||  (!msg.isText())) {
 			arrMessages.add(msg);
 			return arrMessages;
@@ -113,32 +108,7 @@ public class SessionManager implements IFileReadyCallBack {
 	}
 
 	/*
-	 * for each file request create Completion stage and wait
-	 * till file creation process calls back.
-	 */
-	public TextMessage handleTextMessage(TextMessage msg) {
-  	        Source<String, NotUsed> filesSource = 
-  			   Source.from(Arrays.asList(msg.getStrictText()))
-  			   .mapAsyncUnordered(10, (t) -> {
-  				   CompletableFuture<Optional<FileData>> complStage =  new CompletableFuture<Optional<FileData>> ();
-  				   //String filename = t.substring(2,7);
-  				   updateFileInQueue(t, complStage, null);
-  				   System.out.println("in mapAsyncUnordered: " +t);
-  				   return complStage;
-  			   })
-  			   .filter(o -> o.isPresent())
-  			   .map(o1->o1.get())
-  			   //.buffer(5, OverflowStrategy.backpressure())
-  			   .map(t->{
-  				   System.out.println("file out: " + t.getFileName());
-  				   return t.toJson();
-  			   });
-        return TextMessage.create(filesSource);
-    }
-	
-	
-	/*
-	 * Init
+	 * Initialize new item in files queue.
 	 */
 	public void addFileToQueue (String fileName) {
 		QueueItem queueItem  = new QueueItem ();
@@ -146,7 +116,7 @@ public class SessionManager implements IFileReadyCallBack {
 	}
 	
 	/*
-	 * update queue by "File Creator" or by "Stream stage"
+	 * Update queue by "File Creator" or by "Stream stage"
 	 */
 	public synchronized void updateFileInQueue (String fileName, CompletableFuture<Optional<FileData>> complStage ,FileData fileData) {
 		
@@ -200,6 +170,59 @@ public class SessionManager implements IFileReadyCallBack {
 	}
 	
 }
+
+
+	//	public  Flow<Message, Message, NotUsed> createGreeterOLD() {
+//	     Flow<Message, Message, NotUsed> flow = 
+//	    		  Flow.<Message>create()
+//	    		  .mapConcat (m-> this.startFileCreationAsyncAndModifyOutput(m))
+//	    		  .collect(new JavaPartialFunction<Message, Message>() {
+//	    	          @Override
+//	    	          public  Message apply(Message msg, boolean isCheck) throws Exception {
+//	    	            if (isCheck) {
+//	    	              if (msg.isText()) {
+//	    	                return null;
+//	    	              } else {
+//	    	                throw noMatch();
+//	    	              }
+//	    	            } else {
+//	    	              return handleTextMessage(msg.asTextMessage());
+//	    	            }
+//	    	          }
+//	    	        });
+//	     return flow;    
+//	  }
+
+/*
+ * start media file creation process
+ * Create Queue of Constants.FILES_COUNT_TOTAL files
+ * in order to handle file creation callbacks
+ */
+/*
+ * for each file request create Completion stage and wait
+ * till file creation process calls back.
+ */
+//	public TextMessage handleTextMessage(TextMessage msg) {
+//  	        Source<String, NotUsed> filesSource = 
+//  			   Source.from(Arrays.asList(msg.getStrictText()))
+//  			   .mapAsyncUnordered(10, (t) -> {
+//  				   CompletableFuture<Optional<FileData>> complStage =  new CompletableFuture<Optional<FileData>> ();
+//  				   //String filename = t.substring(2,7);
+//  				   updateFileInQueue(t, complStage, null);
+//  				   System.out.println("in mapAsyncUnordered: " +t);
+//  				   return complStage;
+//  			   })
+//  			   .filter(o -> o.isPresent())
+//  			   .map(o1->o1.get())
+//  			   //.buffer(5, OverflowStrategy.backpressure())
+//  			   .map(t->{
+//  				   System.out.println("file out: " + t.getFileName());
+//  				   return t.toJson();
+//  			   });
+//        return TextMessage.create(filesSource);
+//    }
+
+
 
 
 //TODO:

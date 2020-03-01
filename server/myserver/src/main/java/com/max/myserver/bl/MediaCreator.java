@@ -43,7 +43,9 @@ public class MediaCreator implements IFileReadyCallBack {
 	@Override
 	public synchronized void setFileStatus(String fileName,boolean succeded, FileData fileData, String error) {
 		
-		callbackClass.setFileStatus("file" + fileCount, succeded, fileData, error);
+		//callbackClass.setFileStatus("file" + fileCount, succeded, fileData, error);
+		callbackClass.setFileStatus(fileName, succeded, fileData, error);
+
 		if (fileCount==Constants.FILES_COUNT_TOTAL) {
 			System.out.println("Files Creation Done");
 		}
